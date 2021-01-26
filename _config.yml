@@ -1,0 +1,16 @@
+# Book settings
+title: データマイニング
+author: Naruaki TOMA
+logo: './1-intro/figs/book-practical-machine-learning-figure3.9.png'
+copyright: "2021"
+
+#only_build_toc_files: true
+
+repository:
+    url: https://github.com/naltoma/datamining_intro2021
+
+launch_buttons:
+#    notebook_interface: "jupyterlab"
+    notebook_interface: "classic"
+    colab_url: "https://colab.research.google.com"
+    thebe: true
