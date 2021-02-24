@@ -8,9 +8,14 @@ copyright: "2021"
 
 repository:
     url: https://github.com/naltoma/datamining_intro2021
+    branch: main
 
 launch_buttons:
 #    notebook_interface: "jupyterlab"
     notebook_interface: "classic"
     colab_url: "https://colab.research.google.com"
+    binderhub_url: "https://mybinder.org"
     thebe: true
+
+html:
+    use_repository_button: true

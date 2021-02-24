@@ -1,6 +1,15 @@
 - file: Readme.md
+
+- part: 導入
   numbered: true
-  sections:
-  - file: 1-intro/intro.ipynb
+  chapters:
+  - file: 1-intro/intro.md
 
-
+- part: 機械学習入門
+  numbered: true
+  chapters:
+  - file: 2-ml-intro/ml-intro.md
+  - file: 2-ml-intro/regression_diabetes.ipynb
+    title: コード例（線形回帰）
+  - file: 2-ml-intro/data-wrangling.md
+  - file: 2-ml-intro/ml-intro2.md

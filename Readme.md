@@ -2,6 +2,10 @@
 [琉大知能情報コース](https://ie.u-ryukyu.ac.jp)3年次向けの選択科目、かつ、工学部の融合選択科目。2021年度から前期開講になるため、Numpy/Pandas/Matplotlib周りの演習も加える予定。
 
 - [導入](./1-intro/intro.md)
+- 機械学習入門
+  - [機械学習外観](./2-ml-intro/ml-intro.md)
+  - プログラミング演習（Numpy, Pandas, Matplotlib入門）
+  - [機械学習の中身を覗いてみよう](./2-ml-intro/ml-intro2.md)
 - 機械学習概観、モデルの自由さと過学習、タスクに対する特徴量
 - プログラミング演習（Numpy, Pandas, Matplotlib）
 - 特徴量エンジニアリング：特徴ベクトル、数値データに対する前処理
