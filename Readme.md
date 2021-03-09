@@ -1,23 +1,20 @@
-# データ・マイニング
-[琉大知能情報コース](https://ie.u-ryukyu.ac.jp)3年次向けの選択科目、かつ、工学部の融合選択科目。2021年度から前期開講になるため、Numpy/Pandas/Matplotlib周りの演習も加える予定。
-
+# データ・マイニング入門
 - [導入](./1-intro/intro.md)
-- 機械学習入門
-  - [機械学習外観](./2-ml-intro/ml-intro.md)
-  - プログラミング演習（Numpy, Pandas, Matplotlib入門）
-  - [機械学習の中身を覗いてみよう](./2-ml-intro/ml-intro2.md)
-- 機械学習概観、モデルの自由さと過学習、タスクに対する特徴量
-- プログラミング演習（Numpy, Pandas, Matplotlib）
-- 特徴量エンジニアリング：特徴ベクトル、数値データに対する前処理
-- 特徴量エンジニアリング：カテゴリデータに対する前処理
+- [機械学習概観、モデルの自由さと過学習、タスクに対する特徴量](./2-ml-intro/ml-intro.md)　＊2週想定
+- [特徴量エンジニアリング：特徴ベクトル、数値データに対する前処理](./2-ml-intro/preprocess-number.md)　＊演習時間を含めて2週想定
+- [特徴量エンジニアリング：カテゴリデータに対する前処理](./2-ml-intro/preprocess-category.md)　＊1週想定
 - 特徴量エンジニアリング：自然言語処理
-  - シソーラス、カウントと推論に基づいた設計、次元削減
-  - 代表的な自然言語処理（日本語を例に）
-  - テキストデータに対する特徴量設計2（word2vecによる分散表現）
-  - 転移学習外観
+  - [シソーラス、カウントと推論に基づいた設計、次元削減](./3-nlp/nlp1.md)　＊1.5〜2週想定
+  - [代表的な自然言語処理（日本語を例に）](./3-nlp/typical_methods.md)
+  - [テキストデータに対する特徴量設計2（word2vecによる分散表現）](./3-nlp/nlp2.md)
+  - [転移学習外観](./3-nlp/nlp3.md)
 - タスク＆アルゴリズム例
-  - グラフマイニング
-  - 頻出パターンマイニング
-  - 推薦システム
-  - 時系列データ分析
-  - ...
+  - グラフマイニング：[資料](./4-casestudy/graph/graph.md), [コード例](./4-casestudy/graph/graph.ipynb)
+  - 頻出パターンマイニング：[資料](./4-casestudy/frequentpattern/frequentpattern.md)
+  - 推薦システム：[資料](./4-casestudy/recommendation/recommendation.md)
+  - 時系列データ分析：[資料](./4-casestudy/series/series.md), [コード例](./4-casestudy/series/ex-AR.ipynb)
+
+<hr>
+
+# お試し
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/naltoma/datamining_intro/master)
