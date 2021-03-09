@@ -1,5 +1,5 @@
 # データ・マイニング
-- [琉大知能情報コース](https://ie.u-ryukyu.ac.jp)3年次向けの選択科目、かつ、工学部の融合選択科目。2021年度から前期開講になるため、Numpy/Pandas/Matplotlib周りの演習も加える予定。
+- [琉大知能情報コース](https://ie.u-ryukyu.ac.jp/~tnal/2021/dm/)3年次向けの選択科目、かつ、工学部の融合選択科目。2021年度から前期開講になるため、Numpy/Pandas/Matplotlib周りの演習も加える予定。
 
 - [導入](./1-intro/intro.md)
 - Part 1: 機械学習入門
