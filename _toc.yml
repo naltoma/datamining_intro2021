@@ -11,5 +11,5 @@
   - file: 2-ml-intro/ml-intro.md
   - file: 2-ml-intro/regression_diabetes.ipynb
     title: コード例（線形回帰）
-  - file: 2-ml-intro/data-wrangling.md
+  - file: 2-ml-intro/data_wrangling.ipynb
   - file: 2-ml-intro/ml-intro2.md
