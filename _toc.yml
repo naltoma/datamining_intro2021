@@ -4,6 +4,7 @@
   numbered: true
   chapters:
   - file: 1-intro/intro.md
+  - file: 1-intro/env.md
 
 - part: 機械学習入門
   numbered: true
@@ -13,3 +14,10 @@
     title: コード例（線形回帰）
   - file: 2-ml-intro/data_wrangling.ipynb
   - file: 2-ml-intro/ml-intro2.md
+  - file: 2-ml-intro/gradient_descent.ipynb
+
+#- part: 特徴量エンジニアリング
+#  numbered: true
+#  chapters:
+#  - file: 2-ml-intro/preprocess-number.md
+#  - file: 2-ml-intro/preprocess_numerical.ipynb
