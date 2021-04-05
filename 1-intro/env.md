@@ -93,6 +93,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab
 ---
 #### WSL2を使う場合
 - step 1: [WSL2 + pyenv + Visual Studio Codeを使ったPython3の開発環境の作り方](https://aadojo.alterbooth.com/entry/2020/08/19/095654)を参考に、VSCode上で hello world 出力するところまでやる。
+  - 良く分からない場合には[インストール大会](https://ie.u-ryukyu.ac.jp/students/install/2021/post/os/windows/windows/)の「python環境」「wsl2設定」が参考になるかもしれません。　
 - step 2: 追加パッケージのインストール。
   - WSL2側で以下のコマンドを実行。
 ```shell
