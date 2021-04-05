@@ -16,8 +16,10 @@
   - file: 2-ml-intro/ml-intro2.md
   - file: 2-ml-intro/gradient_descent.ipynb
 
-#- part: 特徴量エンジニアリング
-#  numbered: true
-#  chapters:
-#  - file: 2-ml-intro/preprocess-number.md
-#  - file: 2-ml-intro/preprocess_numerical.ipynb
+- part: 特徴量エンジニアリング
+  numbered: true
+  chapters:
+  - file: 3-feature-engineering/preprocess-number.md
+  - file: 3-feature-engineering/preprocess_numerical.ipynb
+  - file: 3-feature-engineering/preprocess-category.md
+  - file: 3-feature-engineering/preprocess_categorical.ipynb
