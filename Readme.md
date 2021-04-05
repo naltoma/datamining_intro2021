@@ -29,10 +29,12 @@
 ---
 ## 参考文献
 - データマイニング・機械学習全般
-  - [Data Mining: Practical Machine Learning Tools and Techniques, 3rd Edition](http://www.cs.waikato.ac.nz/ml/weka/book.html)
-  - [Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow 2, 3rd Edition](https://www.amazon.co.jp/dp/1789955750)
-  - [Pythonで動かして学ぶ！あたらしい機械学習の教科書 第2版](https://www.shoeisha.co.jp/book/detail/9784798159911)
-  - [機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム](https://www.sbcr.jp/product/4797393965/)
+  - [Data Mining: Practical Machine Learning Tools and Techniques, 4th Edition](http://www.cs.waikato.ac.nz/ml/weka/book.html), 代表的なアルゴリズムとそれを用いた事例集。深層学習まで含みます。学内接続で[附属図書館の電子版](http://opac.lib.u-ryukyu.ac.jp/opc/xc/openurl/search?rft.isbn=9780128042915)読めます。
+  - [データからの知識発見](https://www.amazon.co.jp/dp/459531373X/), 代表的なアルゴリズムの解説本。1冊にまとめてるためにやや急ぎ足ですが、多数のアルゴリズムを概観するならオススメ。
+  - [Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow 2, 3rd Edition](https://www.amazon.co.jp/dp/1789955750), scikit-learnをベースに「適用方法」を中心に解説。
+  - [Pythonで動かして学ぶ！あたらしい機械学習の教科書 第2版](https://www.shoeisha.co.jp/book/detail/9784798159911), 機械学習の中身をシミュレーション＆可視化しながら学んでいく教科書。
+  - [機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム](https://www.sbcr.jp/product/4797393965/), 数学中心に基礎から学んでいく教科書。
+  - [仕事ではじめる機械学習](https://www.oreilly.co.jp/books/9784873118215/), タスク視点から整理した事例集。
 - 特徴量エンジニアリング
-  - [機械学習のための特徴量エンジニアリング――その原理とPythonによる実践](https://www.oreilly.co.jp/books/9784873118680/)
+  - [機械学習のための特徴量エンジニアリング――その原理とPythonによる実践](https://www.oreilly.co.jp/books/9784873118680/), 機械学習を具体的なタスクに適用しようとした際に直面する「あるある事例集」。
   - [5.3. Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html)
