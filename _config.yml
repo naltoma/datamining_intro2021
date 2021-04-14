@@ -19,3 +19,7 @@ launch_buttons:
 
 html:
     use_repository_button: true
+
+sphinx:
+    config:
+        html_extra_path: ['assets']

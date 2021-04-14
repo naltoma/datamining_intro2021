@@ -16,8 +16,8 @@
   - 特徴ベクトル、数値データに対する前処理: [資料](./3-feature-engineering/preprocess-number.md), [コード例](./3-feature-engineering/preprocess_numerical.ipynb)
   - カテゴリデータに対する前処理: [資料](./3-feature-engineering/preprocess-category.md), [コード例](./3-feature-engineering/preprocess_categorical.ipynb)
 - Part 3: 特徴量エンジニアリング：自然言語処理
-  - シソーラス、カウントと推論に基づいた設計、次元削減
-  - 代表的な自然言語処理（日本語を例に）
+  - シソーラス、カウントと推論に基づいた設計、次元削減: [資料](./4-nlp/nlp1.md), [コード例](./4-nlp/nlp1_code.ipynb)
+  - 代表的な自然言語処理（日本語を例に）: [資料](./4-nlp/typical_methods.md), [mecab編](./4-nlp/typical_methods_mecab.ipynb), [spacy編](./4-nlp/typical_methods_spacy.ipynb)
   - テキストデータに対する特徴量設計2（word2vecによる分散表現）
   - 転移学習外観
 - タスク＆アルゴリズム例
@@ -38,3 +38,25 @@
 - 特徴量エンジニアリング
   - [機械学習のための特徴量エンジニアリング――その原理とPythonによる実践](https://www.oreilly.co.jp/books/9784873118680/), 機械学習を具体的なタスクに適用しようとした際に直面する「あるある事例集」。
   - [5.3. Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html)
+- 自然言語処理
+  - [自然言語処理 (放送大学教材)](https://www.amazon.co.jp/dp/4595319584/)
+  - [ゼロから作るDeep Learning ❷ ――自然言語処理編](https://www.oreilly.co.jp/books/9784873118369/)
+  - [自然言語処理の基本と技術](https://www.shoeisha.co.jp/book/detail/9784798128528)
+  - NLTK: [Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit](https://www.nltk.org/book/)
+  - [MeCab: Yet Another Part-of-Speech and Morphological Analyzer](https://taku910.github.io/mecab/)
+  - [日本語構文・格・照応解析システム KNP](http://nlp.ist.i.kyoto-u.ac.jp/index.php?KNP)
+    - [KNPの基本的な出力の読み方](http://cr.fvcrc.i.nagoya-u.ac.jp/~sasano/knp/format.html)
+    - [pyknp: Python Module for JUMAN++/KNP](https://pyknp.readthedocs.io/en/latest/)
+  - [Python による日本語自然言語処理](http://www.nltk.org/book-jp/ch12.html)
+    - Python 2.x時代のコード。関連ライブラリも当時のもののため、そのままでは動作しないコード例あり。自然言語処理における代表的なタスクや取組事例として参考にしよう。
+  - [GiNZA公式サイト](https://megagonlabs.github.io/ginza/)
+  - [spaCy公式サイト](https://spacy.io)
+  - [word2vecによる自然言語処理](https://www.oreilly.co.jp/books/9784873116839/)
+  - [gensim](https://radimrehurek.com/gensim/)
+  - [fastText](https://fasttext.cc)
+  - [BERT](https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html)
+  - T5
+  - GPT-3
+  - 事例紹介
+    - [自然言語処理 #2 Advent Calendar 2019](https://qiita.com/advent-calendar/2019/nlp2)
+    - [自然言語処理 Advent Calendar 2020](https://qiita.com/advent-calendar/2020/nlp)
