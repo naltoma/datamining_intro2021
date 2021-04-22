@@ -12,6 +12,8 @@
   - file: 2-ml-intro/ml-intro.md
   - file: 2-ml-intro/regression_diabetes.ipynb
     title: コード例（線形回帰）
+  - file: 2-ml-intro/intro_numpy.ipynb
+  - file: 2-ml-intro/intro_matplotlib.ipynb
   - file: 2-ml-intro/data_wrangling.ipynb
   - file: 2-ml-intro/ml-intro2.md
   - file: 2-ml-intro/gradient_descent.ipynb

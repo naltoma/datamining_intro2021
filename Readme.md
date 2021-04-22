@@ -9,7 +9,9 @@
 - Part 1: 機械学習入門
   - [機械学習外観](./2-ml-intro/ml-intro.md)
   - [コード例（線形回帰）](./2-ml-intro/regression_diabetes.ipynb)
-  - [プログラミング演習（Numpy, Pandas, Matplotlib入門）](./2-ml-intro/data_wrangling.ipynb)
+  - プログラミング演習
+    - [Numpy入門](./2-ml-intro/intro_numpy.ipynb), [Matplotlib入門](./2-ml-intro/intro_matplotlib.ipynb)
+    - [映画レビューデータを通したデータ処理演習(Pandas)](./2-ml-intro/data_wrangling.ipynb)
   - [機械学習の中身を覗いてみよう](./2-ml-intro/ml-intro2.md)
   - [1次元データセットを通した勾配法の理解](./2-ml-intro/gradient_descent.ipynb)
 - Part 2: 特徴量エンジニアリング
