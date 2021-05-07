@@ -15,6 +15,7 @@
   - file: 2-ml-intro/intro_numpy.ipynb
   - file: 2-ml-intro/intro_matplotlib.ipynb
   - file: 2-ml-intro/data_wrangling.ipynb
+    title: pandas入門＋推薦システムの例
   - file: 2-ml-intro/ml-intro2.md
   - file: 2-ml-intro/gradient_descent.ipynb
 
@@ -34,3 +35,4 @@
   - file: 4-nlp/typical_methods.md
   - file: 4-nlp/typical_methods_mecab.ipynb
   - file: 4-nlp/typical_methods_spacy.ipynb
+  - file: 4-nlp/nlp2.md
