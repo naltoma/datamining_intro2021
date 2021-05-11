@@ -193,10 +193,10 @@
 
 ---
 ### 分布仮説に基づいた単語のベクトル化
-シソーラスやカウントベースのように各概念（≒単語）に対し個別のIDを割り当ててて表現する方法を **局所表現（local representation）** と呼ぶ。これに対して複数概念から参照される形で表現する方法を **分散表現（distributed representation）** と呼ぶ。
+シソーラスやカウントベースのように各概念（≒単語）に対し個別のIDを割り当ててて表現する方法を **局所表現（local representation）** と呼ぶ。これに対して複数概念から参照される形で表現する方法を **分散表現（distributed representation）もしくは単語埋め込み（word embedding）** と呼ぶ。
 
 局所表現と分散表現の概念図として[言語処理における分散表現学習のフロンティア](https://jsai.ixsq.nii.ac.jp/ej/index.php?action=pages_view_main&active_action=repository_action_common_download&item_id=2107&item_no=1&attribute_id=22&file_no=1&page_id=13&block_id=23)より抜粋した下図を眺めてみよう。
-- ![局所表現と分散表現の例](./figs/representations.pdf)
+- ![局所表現と分散表現の例](./figs/representations.svg)
 
 実用的な分散表現は後日取り扱うとして、今回はこのような分散表現を得るための基礎を身につけるため、分布仮説に基づいた最もシンプルな単語のベクトル化手法を眺めていこう。
 

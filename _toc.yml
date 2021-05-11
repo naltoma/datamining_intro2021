@@ -36,3 +36,4 @@
   - file: 4-nlp/typical_methods_mecab.ipynb
   - file: 4-nlp/typical_methods_spacy.ipynb
   - file: 4-nlp/nlp2.md
+  - file: 4-nlp/train_momotaro.ipynb
