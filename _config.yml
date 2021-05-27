@@ -23,3 +23,6 @@ html:
 sphinx:
     config:
         html_extra_path: ['assets']
+
+execute:
+    execute_notebooks: 'off'
