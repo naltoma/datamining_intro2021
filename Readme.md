@@ -42,7 +42,9 @@
   - [5.3. Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html)
 - 自然言語処理
   - [自然言語処理 (放送大学教材)](https://www.amazon.co.jp/dp/4595319584/)
+  - [ゼロから作るDeep Learning ――Pythonで学ぶディープラーニングの理論と実装](https://www.oreilly.co.jp/books/9784873117584/)
   - [ゼロから作るDeep Learning ❷ ――自然言語処理編](https://www.oreilly.co.jp/books/9784873118369/)
+  - [深層学習](https://www.kspub.co.jp/book/detail/1529021.html)
   - [自然言語処理の基本と技術](https://www.shoeisha.co.jp/book/detail/9784798128528)
   - NLTK: [Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit](https://www.nltk.org/book/)
   - [MeCab: Yet Another Part-of-Speech and Morphological Analyzer](https://taku910.github.io/mecab/)
