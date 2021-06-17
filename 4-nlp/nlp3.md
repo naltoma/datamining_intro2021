@@ -3,6 +3,9 @@
   - [深層学習](https://www.kspub.co.jp/book/detail/1529021.html)
   - [ゼロから作るDeep Learning ――Pythonで学ぶディープラーニングの理論と実装](https://www.oreilly.co.jp/books/9784873117584/)
   - [ゼロから作るDeep Learning ❷ ――自然言語処理編](https://www.oreilly.co.jp/books/9784873118369/)
+  - [転移学習とは | メリット・デメリット・ファインチューニングの意味](https://ledge.ai/transfer-learning/)
+  - [Pre-Trained Models: Past, Present and Future](https://arxiv.org/abs/2106.07139)
+  - [Applications of Deep Neural Networks](https://arxiv.org/abs/2009.05673)
 
 ---
 ## NNの歴史
@@ -123,7 +126,14 @@ Batch NormalizationはDropoutと併用して使うことは避けたほうが良
 
 ---
 ## pretraining + fine-tuning
-オートエンコーダやLSTMにより深層学習が現実的なものになりはじめると共に、あまりにも大きな計算資源を必要とする学習を何度もやり直すことの非現実さにも直面し始めた。このような問題意識から取り組まれているのが転移学習や、事前学習とファインチューニングと呼ばれる学習方式だ。これらはどちらも2段階の学習を行う点で共通している。明確な区分はなされてないが、ファインチューニング時に「ドメイン」「タスク」どちらか片方でも異なるケースを転移学習と呼ぶことが多い。ドメインとはある分野に関する知識を指しており、例えば「映画レビューにおける極性判定」をする際に必要なドメイン知識と「ニュース記事におけるクラス推定」をするためのドメイン知識とでは異なる知識が必要になるだろう。振り返ると、本当にやりたいこととは異なるドメイン知識もしくは異なるタスクにおいて予め事前学習を行い、その学習結果（学習で得られたパラメータ）を用いて本当にやりたいことを学習するという2段階の学習を行うのが転移学習である。
+オートエンコーダやLSTMにより深層学習が現実的なものになりはじめると共に、あまりにも大きな計算資源を必要とする学習を何度もやり直すことの非現実さにも直面し始めた。
+
+- [Xu Han and et. al., Pre-Trained Models: Past, Present and Future, arXiv:2106.07139](https://arxiv.org/abs/2106.07139) より引用。
+  - ![PTMs-fig1](./figs/PTMs-fig1.png)
+  - ![PTMs-fig2](./figs/PTMs-fig2.png)
+  - ![PTMs-fig4](./figs/PTMs-fig4.png)
+
+このような問題意識から取り組まれているのが転移学習や、事前学習とファインチューニングと呼ばれる学習方式だ。これらはどちらも2段階の学習を行う点で共通している。明確な区分はなされてないが、ファインチューニング時に「ドメイン」「タスク」どちらか片方でも異なるケースを転移学習と呼ぶことが多い。ドメインとはある分野に関する知識を指しており、例えば「映画レビューにおける極性判定」をする際に必要なドメイン知識と「ニュース記事におけるクラス推定」をするためのドメイン知識とでは異なる知識が必要になるだろう。振り返ると、本当にやりたいこととは異なるドメイン知識もしくは異なるタスクにおいて予め事前学習を行い、その学習結果（学習で得られたパラメータ）を用いて本当にやりたいことを学習するという2段階の学習を行うのが転移学習である。
 
 - 定義
   - [Wikipedia: Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning)
@@ -147,14 +157,21 @@ Batch NormalizationはDropoutと併用して使うことは避けたほうが良
   - 最終的にも、単独の機械学習だけで学習し続けた場合よりもより良いパフォーマンスを発揮する傾向にある。
 
 - autoencoder, pretraining
-  - [G. E. Hinton, S. Osindero, and Y. Teh. A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1544, 2006.]
-  - [Y. Bengio, P. Lamblin, D. Popovic, and H. Larochelle. Greedy layer-wise training of deep networks. In Proc. NIPS, 2006.]
+  - G. E. Hinton, S. Osindero, and Y. Teh. A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1544, 2006.
+  - Y. Bengio, P. Lamblin, D. Popovic, and H. Larochelle. Greedy layer-wise training of deep networks. In Proc. NIPS, 2006.
+  - [転移学習とは | メリット・デメリット・ファインチューニングの意味](https://ledge.ai/transfer-learning/)
+  - [Applications of Deep Neural Networks](https://arxiv.org/abs/2009.05673)
+  - [Xu Han and et. al., Pre-Trained Models: Past, Present and Future, arXiv:2106.07139](https://arxiv.org/abs/2106.07139)
 
 ---
 ## 転移学習の実応用例
 ### 画像処理での例
 - [TRANSFER LEARNING FOR COMPUTER VISION TUTORIAL](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
   - PyTorchの公式チュートリアル。コード付き。ImageNetで学習済みのResNet18を用いて、100枚程度の小数サンプルしか用意していないアリとハチの画像を分類する追加学習をする例。ResNet18の層は追加学習時には重みを変更しないよう固定してしまい、追加した層でのみ新たな学習をする。
+- [Transfer learning and fine-tuning](https://www.tensorflow.org/guide/keras/transfer_learning)
+  - TensorFlowの公式チュートリアル。コード付き。ImageNetで学習済みモデルを用いて犬猫分類する追加学習をしている。追加学習のtipsとして、BatchNomalization を含むモデルの場合、推論時と学習時との動作違いによるミスマッチへの対応するため、最初は学習済みモデルを固定して追加学習し、その後で学習率を下げて全体を微調整学習するという流れを例示しています。
+- [Transfer learning with TensorFlow Hub](https://www.tensorflow.org/tutorials/images/transfer_learning_with_hub)
+  - TensorFlowの公式チュートリアル。コード付き。各種学習済みモデルが登録されている TensorFlow Hub を利用する例。
 
 ---
 ### 自然言語処理での例
@@ -170,15 +187,17 @@ Batch NormalizationはDropoutと併用して使うことは避けたほうが良
 - シンプルな転移学習例
   - 他の大規模コーパスからword2vec, fastText, BERT等でモデル構築（事前学習）するか、もしくは学習済みモデルを採用する。ここでの事前学習とは、大規模コーパスから構築した言語モデルを指す。
   - 学習済みモデルを用いて、別タスク向けのデータセットを構築し、学習（ファインチューニング）する。
-- コード例
-  - 簡易版転移学習の例: [ [gensim版](./fine-tuning.ipynb) | [spacy版](./fine-tuning-spacy.ipynb) ]
-    - ソースが異なり、タスクも異なる、unsupervised transfer learningの例。
-    - ここでは事前学習の際に自前でコーパス用意することも想定した例ということで Wikipedia ダンプデータをわざわざローカルで学習していますが、動作確認するぐらいなら gensim, fastText, BERT等は学習済みモデルも公開しているので、そちらを使う方が楽です。ただし、Google Colabで学習済み fastText はメモリ不足のため動作しませんでした。
-  - 別例1：[Transfer Learning for NLP: Sentiment Analysis on Amazon Reviews](https://github.com/feedly/ml-demos/blob/master/source/TransferLearningNLP.ipynb)
-    - アマゾンのレビュー評価付きテキストデータで、学習用300万サンプル、テスト用65万サンプル。事前学習なしでもそれなりに取り組めそうな規模です。
-  - 別例2：[BERT Tutorial on Colaboratory](https://colab.research.google.com/drive/1ywsvwO6thOVOrfagjjfuxEf6xVRxbUNO)
-    - Colaboratory想定のため、環境構築はとっても楽。
-    - ちなみに、BERTの事前学習自体に要する計算リソースはと〜〜〜〜〜っても高いです。公式曰く "Pre-training is fairly expensive (four days on 4 to 16 Cloud TPUs)"。
+  - コード例
+    - 簡易版転移学習の例: [ [gensim版](./fine-tuning.ipynb) | [spacy版](./fine-tuning-spacy.ipynb) ]
+      - ソースが異なり、タスクも異なる、unsupervised transfer learningの例。
+      - ここでは事前学習の際に自前でコーパス用意することも想定した例ということで Wikipedia ダンプデータをわざわざローカルで学習していますが、動作確認するぐらいなら gensim, fastText, BERT等は学習済みモデルも公開しているので、そちらを使う方が楽です。ただし、Google Colabで学習済み fastText はメモリ不足のため動作しませんでした。
+- 別例1：[Transfer Learning for NLP: Sentiment Analysis on Amazon Reviews](https://github.com/feedly/ml-demos/blob/master/source/TransferLearningNLP.ipynb)
+  - アマゾンのレビュー評価付きテキストデータで、学習用300万サンプル、テスト用65万サンプル。事前学習なしでもそれなりに取り組めそうな規模です。
+- 別例2：[BERT Tutorial on Colaboratory](https://colab.research.google.com/drive/1ywsvwO6thOVOrfagjjfuxEf6xVRxbUNO)
+  - Colaboratory想定のため、環境構築はとっても楽。
+  - ちなみに、BERTの事前学習自体に要する計算リソースはと〜〜〜〜〜っても高いです。公式曰く "Pre-training is fairly expensive (four days on 4 to 16 Cloud TPUs)"。
+- 別例3: T5 (Text-To-Text Transfer Transformer)
+  - [転移学習のサンプルコード](https://github.com/sonoisa/t5-japanese)
 
 ---
 ### 討論
