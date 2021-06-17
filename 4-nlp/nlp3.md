@@ -171,7 +171,7 @@ Batch NormalizationはDropoutと併用して使うことは避けたほうが良
   - 他の大規模コーパスからword2vec, fastText, BERT等でモデル構築（事前学習）するか、もしくは学習済みモデルを採用する。ここでの事前学習とは、大規模コーパスから構築した言語モデルを指す。
   - 学習済みモデルを用いて、別タスク向けのデータセットを構築し、学習（ファインチューニング）する。
 - コード例
-  - [簡易版転移学習の例](./fine-tuning.ipynb)
+  - 簡易版転移学習の例: [ [gensim版](./fine-tuning.ipynb) | [spacy版](./fine-tuning-spacy.ipynb) ]
     - ソースが異なり、タスクも異なる、unsupervised transfer learningの例。
     - ここでは事前学習の際に自前でコーパス用意することも想定した例ということで Wikipedia ダンプデータをわざわざローカルで学習していますが、動作確認するぐらいなら gensim, fastText, BERT等は学習済みモデルも公開しているので、そちらを使う方が楽です。ただし、Google Colabで学習済み fastText はメモリ不足のため動作しませんでした。
   - 別例1：[Transfer Learning for NLP: Sentiment Analysis on Amazon Reviews](https://github.com/feedly/ml-demos/blob/master/source/TransferLearningNLP.ipynb)
@@ -229,3 +229,9 @@ Batch NormalizationはDropoutと併用して使うことは避けたほうが良
     - [Transformer: A Novel Neural Network Architecture for Language Understanding](https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html)
     - [論文解説 Attention Is All You Need (Transformer)](http://deeplearning.hatenablog.com/entry/transformer)
     - [BERT解説：自然言語処理のための最先端言語モデル](https://ainow.ai/2019/05/21/167211/)
+- BERT以降
+  - [BERT以降の事前学習済みモデルのトレンドと主要モデルを紹介！ Part 1 学習方法編](https://elyza-inc.hatenablog.com/entry/2021/03/25/160727)
+  - [【日本語モデル付き】2021年に自然言語処理をする人にお勧めしたい事前学習済みモデル](https://qiita.com/sonoisa/items/a9af64ff641f0bbfed44)
+  - T5 (Text-To-Text Transfer Transformer)
+    - [日本語T5事前学習済みモデル](https://huggingface.co/sonoisa/t5-base-japanese)
+    - [転移学習のサンプルコード](https://github.com/sonoisa/t5-japanese)

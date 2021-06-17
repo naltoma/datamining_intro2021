@@ -39,3 +39,5 @@
   - file: 4-nlp/train_momotaro.ipynb
   - file: 4-nlp/nlp3.md
   - file: 4-nlp/fine-tuning.ipynb
+  - file: 4-nlp/fine-tuning-spacy.ipynb
+    title: ファインチューニング例（spacy版）
