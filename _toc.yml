@@ -47,3 +47,5 @@
   chapters:
   - file: 5-others/graph/graph.md
   - file: 5-others/graph/graph_example.md
+  - file: 5-others/frequentpattern/frequentpattern.md
+  - file: 5-others/frequentpattern/associationrules.ipynb
