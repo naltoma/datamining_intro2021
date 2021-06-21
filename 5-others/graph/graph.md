@@ -95,6 +95,7 @@
     - ![A plot of the rank versus frequency for the first 10 million words in 30 Wikipedias (dumps from October 2015) in a log-log scale.](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Zipf_30wiki_en_labels.png/1920px-Zipf_30wiki_en_labels.png)
     - "Zipf's law was originally formulated in terms of quantitative linguistics, stating that given some corpus of natural language utterances, the frequency of any word is inversely proportional to its rank in the frequency table. Thus the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, etc.: the rank-frequency distribution is an inverse relation."
   - [Zpifの法則](http://www2.phys.cs.is.nagoya-u.ac.jp/~tokita/tokiwiki/?Zipf%A4%CE%CB%A1%C2%A7)
+  - [統計的テキスト解析(5)～統計法則と指標～, ジップの法則](https://www1.doshisha.ac.jp/~mjin/R/60/60.html)
 - エッジ数が少ないノードほど多く、エッジ数が多いノードは少ない。
   - [PEGASUS: A Peta-Scale Graph Mining System - Implementation and Observations](http://www.cs.cmu.edu/~ukang/papers/PegasusICDM2009.pdf). U Kang, Charalampos E. Tsourakakis, and Christos Faloutsos. (ICDM) 2009, Miami, Florida, USA.Best Application Paper (runner-up).
 
