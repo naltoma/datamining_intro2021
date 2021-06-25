@@ -254,3 +254,5 @@ Batch NormalizationはDropoutと併用して使うことは避けたほうが良
   - T5 (Text-To-Text Transfer Transformer)
     - [日本語T5事前学習済みモデル](https://huggingface.co/sonoisa/t5-base-japanese)
     - [転移学習のサンプルコード](https://github.com/sonoisa/t5-japanese)
+  - GPT-3
+    - [超汎化言語モデル GPT-3のライセンスを日本でいち早く取得して使ってみた話](https://dev.babel.jp/entry/2021/06/23/180135)
