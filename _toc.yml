@@ -49,3 +49,5 @@
   - file: 5-others/graph/graph_example.md
   - file: 5-others/frequentpattern/frequentpattern.md
   - file: 5-others/frequentpattern/associationrules.ipynb
+  - file: 5-others/recommendation/recommendation.md
+  - file: 5-others/recommendation/recommendation_nn.ipynb
