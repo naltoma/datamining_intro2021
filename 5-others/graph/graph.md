@@ -158,3 +158,13 @@ and How It Works](https://www.cs.princeton.edu/~chazelle/courses/BIB/pagerank.ht
       - ``σ_{st}``：ノードsからノードtへの、最短パス総数。
       - ``σ_{st}(v)``：ノードsからノードtへの最短パスの中で、ノードvを通る数。
       - グラフ内の全ての頂点から他のすべての頂点への最短経路を考える。このとき、より多くの最短経路に含まれているノードを「中心性が高い」と判断する。
+
+---
+## グラフマイニングの例
+- [networkxによるグラフマイニングの例](./graph_example.ipynb)
+  - Facebookのego networkを読み込み、次数カウント、Ziph則確認。
+  - 小さなネットワークでページランク、ランダムサーファーモデル・シミュレーション、モジュラリティ確認。
+- [DGLによるグラフマイニングの例](https://docs.dgl.ai/tutorials/basics/1_first.html)
+  - 空手クラブのインストラクター・顧客のネットワークに対し、半教師あり学習（一部のみ教師データ付与）でコミュニティ抽出。
+  - [他チュートリアル](https://docs.dgl.ai/tutorials/blitz/index.html)
+    - ノード分類、リンク予測（次にどのようなリンクが生成されそうか）、グラフ分類ぐらいが紹介されています。
