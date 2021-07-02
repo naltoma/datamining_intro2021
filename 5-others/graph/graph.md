@@ -6,6 +6,7 @@
   - [世界でもっとも強力な9のアルゴリズム](https://www.amazon.co.jp/dp/482228493X)
   - [Newman アルゴリズムによるソーシャルグラフのクラスタリング](https://www.slideshare.net/komiyaatsushi/newman-6670300)
   - [日本の中心はどの県だ？グラフ理論（ネットワーク）の基本的な諸概念](https://www.ajimatics.com/entry/2018/01/30/133238)
+  - [Graph Neural Networks](https://hhaji.github.io/Deep-Learning/Graph-Neural-Networks/)
 
 ---
 ## グラフを扱う背景や動機
