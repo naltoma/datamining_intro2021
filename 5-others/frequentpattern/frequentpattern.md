@@ -74,3 +74,4 @@ lift(X \Rightarrow Y) = \frac{conf(X \cup Y)}{supp(Y)} = \frac{supp( X \Rightarr
 ## コード例
 - [orange3-associateパッケージによるアソシエーション分析の例](./associationrules.ipynb)
 - より大規模になると、[spark.mllib](http://mogile.web.fc2.com/spark/mllib-frequent-pattern-mining.html)が良いかもしれない。（未検証）
+  - Pythonラッパー: [pyspark](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.fpm.PrefixSpan)
