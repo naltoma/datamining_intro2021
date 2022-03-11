@@ -1,12 +1,13 @@
-- file: Readme.md
-
-- part: 導入
+format: jb-book
+root: Readme.md
+parts:
+- caption: "導入"
   numbered: true
   chapters:
   - file: 1-intro/intro.md
   - file: 1-intro/env.md
 
-- part: 機械学習入門
+- caption: "機械学習入門"
   numbered: true
   chapters:
   - file: 2-ml-intro/ml-intro.md
@@ -19,35 +20,35 @@
   - file: 2-ml-intro/ml-intro2.md
   - file: 2-ml-intro/gradient_descent.ipynb
 
-- part: 特徴量エンジニアリング
-  numbered: true
-  chapters:
-  - file: 3-feature-engineering/preprocess-number.md
-  - file: 3-feature-engineering/preprocess_numerical.ipynb
-  - file: 3-feature-engineering/preprocess-category.md
-  - file: 3-feature-engineering/preprocess_categorical.ipynb
+#- caption: "特徴量エンジニアリング"
+#  numbered: true
+#  chapters:
+#  - file: 3-feature-engineering/preprocess-number.md
+#  - file: 3-feature-engineering/preprocess_numerical.ipynb
+#  - file: 3-feature-engineering/preprocess-category.md
+#  - file: 3-feature-engineering/preprocess_categorical.ipynb
 
-- part: 特徴量エンジニアリング（テキストデータ）
-  numbered: true
-  chapters:
-  - file: 4-nlp/nlp1.md
-  - file: 4-nlp/nlp1_code.ipynb
-  - file: 4-nlp/typical_methods.md
-  - file: 4-nlp/typical_methods_mecab.ipynb
-  - file: 4-nlp/typical_methods_spacy.ipynb
-  - file: 4-nlp/nlp2.md
-  - file: 4-nlp/train_momotaro.ipynb
-  - file: 4-nlp/nlp3.md
-  - file: 4-nlp/fine-tuning.ipynb
-  - file: 4-nlp/fine-tuning-spacy.ipynb
-    title: ファインチューニング例（spacy版）
+#- caption: "特徴量エンジニアリング（テキストデータ）"
+#  numbered: true
+#  chapters:
+#  - file: 4-nlp/nlp1.md
+#  - file: 4-nlp/nlp1_code.ipynb
+#  - file: 4-nlp/typical_methods.md
+#  - file: 4-nlp/typical_methods_mecab.ipynb
+#  - file: 4-nlp/typical_methods_spacy.ipynb
+#  - file: 4-nlp/nlp2.md
+#  - file: 4-nlp/train_momotaro.ipynb
+#  - file: 4-nlp/nlp3.md
+#  - file: 4-nlp/fine-tuning.ipynb
+#  - file: 4-nlp/fine-tuning-spacy.ipynb
+#    title: ファインチューニング例（spacy版）
 
-- part: タスクとマイニングアルゴリズムの例
-  numbered: true
-  chapters:
-  - file: 5-others/graph/graph.md
-  - file: 5-others/graph/graph_example.md
-  - file: 5-others/frequentpattern/frequentpattern.md
-  - file: 5-others/frequentpattern/associationrules.ipynb
-  - file: 5-others/recommendation/recommendation.md
-  - file: 5-others/recommendation/recommendation_nn.ipynb
+#- caption: "タスクとマイニングアルゴリズムの例"
+#  numbered: true
+#  chapters:
+#  - file: 5-others/graph/graph.md
+#  - file: 5-others/graph/graph_example.md
+#  - file: 5-others/frequentpattern/frequentpattern.md
+#  - file: 5-others/frequentpattern/associationrules.ipynb
+#  - file: 5-others/recommendation/recommendation.md
+#  - file: 5-others/recommendation/recommendation_nn.ipynb
