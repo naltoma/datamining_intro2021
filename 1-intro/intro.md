@@ -263,6 +263,7 @@
     - リアルタイム処理
     - 高速化等実用的な実装
     - [MLOps](https://ja.wikipedia.org/wiki/MLOps)
+      - MLOps失敗事例: [実はAIを使っている、長崎ちゃんぽん「リンガーハット」　予測精度が突如ダウン……どう立ち向かったのか？](https://www.itmedia.co.jp/business/articles/2203/10/news007.html)
 
 ---
 
