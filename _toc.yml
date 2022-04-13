@@ -20,19 +20,19 @@ parts:
   - file: 2-ml-intro/ml-intro2.md
   - file: 2-ml-intro/gradient_descent.ipynb
 
-#- caption: "特徴量エンジニアリング"
-#  numbered: true
-#  chapters:
-#  - file: 3-feature-engineering/preprocess-number.md
-#  - file: 3-feature-engineering/preprocess_numerical.ipynb
-#  - file: 3-feature-engineering/preprocess-category.md
-#  - file: 3-feature-engineering/preprocess_categorical.ipynb
+- caption: "特徴量エンジニアリング"
+  numbered: true
+  chapters:
+  - file: 3-feature-engineering/preprocess-number.md
+  - file: 3-feature-engineering/preprocess_numerical.ipynb
+  - file: 3-feature-engineering/preprocess-category.md
+  - file: 3-feature-engineering/preprocess_categorical.ipynb
 
 #- caption: "特徴量エンジニアリング（テキストデータ）"
 #  numbered: true
 #  chapters:
 #  - file: 4-nlp/nlp1.md
-#  - file: 4-nlp/nlp1_code.ipynb
+#  - file: 4-nlp/nlp1_code_spacy.ipynb
 #  - file: 4-nlp/typical_methods.md
 #  - file: 4-nlp/typical_methods_mecab.ipynb
 #  - file: 4-nlp/typical_methods_spacy.ipynb

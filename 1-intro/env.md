@@ -11,9 +11,8 @@
 ---
 ## 開発環境の前に
 - 知能情報学生
-  - e18, e19学生は Anaconda で環境構築済みのはず。それ以前の学生も構築済みかもしれないため、まずは動作確認をしてみよう。
-  - e20学生は Miniconda で部分的に環境構築済みのはず。適宜モジュールをインストールしよう。
-  - e21学生は venv で部分的に環境構築済みのはず。適宜モジュールをインストールしよう。
+  - e18, e19, e20 の学生は Anaconda もしくは Miniconda で環境構築済みのはず。**残念ながら、conda環境では一部のプログラム(自然言語処理, spacy)が動作しません**。「開発環境の設定」を参考に、pipで環境構築してください。
+  - e21学生は pip + venv で部分的に環境構築済みのはず。適宜モジュールをインストールしよう。
 - 他コース学生
   - 環境が全くわからないため、まずは動作確認をしてみよう。一度もPythonプログラミング環境を構築したことがないのであれば動作確認をスキップして、環境構築からやろう。
 
@@ -38,9 +37,9 @@
 - 想定
   - macOS: 11.6以降。
     - 10.14ぐらいでも恐らく問題ないが、未確認。
-  - Python: 3.7〜3.8系
+  - Python: 3.8〜3.9系
     - 2021年4月時点では、3.9系は避けたほうが良い。
-    - 2022年4月時点では 3.9系 stable 版で大丈夫かも。安心を求めるなら 3.8系 stable 版推奨。
+    - 2022年4月時点では 3.9系 stable 版で大丈夫かも。安心を求めるなら 3.8系 stable 版推奨。ただし、spacyのM1最適化版を使いたいなら 3.9 必須。
 
 ---
 #### pip を使う場合
@@ -51,7 +50,7 @@ python3 -m venv ~/.venv/dm
 source ~/.venv/dm/bin/activate
 which python # ~/.venv/bin/python 想定
 pip install --upgrade pip
-pip install scikit-learn pandas matplotlib seaborn jupyterlab
+pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
 ```
 
 - step 2: VSCodeをインストール。
@@ -60,7 +59,9 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab
   - 冒頭のサンプルコードで動作確認してみよう。
 
 ---
-#### condaを使う場合
+#### condaを使う場合（**推奨しません**）
+2022年4月時点では、condaでは[自然言語処理ライブラリspacy](https://spacy.io/)が動作しません。前述の pip を推奨します。
+
 - step 1: [Anaconda公式サイト](https://www.anaconda.com)から自分にあったインストーラを選んでインストール。
 - step 2: Pythonインタプリタのパスを確認。
   - ``which python``
@@ -85,7 +86,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab
 ---
 ### ゼロから環境構築：Windows編
 - 想定
-  - Python: 3.7〜3.8系
+  - Python: 3.8〜3.9系
     - 2021年4月時点で3.9系は避けたほうが良い。
     - 2022年4月時点では 3.9系 stable 版で大丈夫かも。安心を求めるなら 3.8系 stable 版推奨。
 - 大別して WSL2 により Linux系OSをインストールしてそこで環境構築するか、Windows上で直接環境構築するかの選択肢がある。
@@ -102,7 +103,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab
   - WSL2側で以下のコマンドを実行。
 ```shell
 pip install --upgrade pip
-pip install scikit-learn pandas matplotlib seaborn jupyterlab
+pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
 ```
 - step 3: 動作確認。
   - 冒頭のサンプルコードで動作確認してみよう。
