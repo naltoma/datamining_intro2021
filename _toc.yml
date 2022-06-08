@@ -13,6 +13,8 @@ parts:
   - file: 2-ml-intro/ml-intro.md
   - file: 2-ml-intro/regression_diabetes.ipynb
     title: コード例（線形回帰）
+  - file: 2-ml-intro/intro_ml_flow.ipynb
+    title: コード例（ダウンロードしたデータセットに機械学習を適用する流れ）
   - file: 2-ml-intro/intro_numpy.ipynb
   - file: 2-ml-intro/intro_matplotlib.ipynb
   - file: 2-ml-intro/data_wrangling.ipynb
@@ -28,11 +30,18 @@ parts:
   - file: 3-feature-engineering/preprocess-category.md
   - file: 3-feature-engineering/preprocess_categorical.ipynb
 
-#- caption: "特徴量エンジニアリング（テキストデータ）"
-#  numbered: true
-#  chapters:
-#  - file: 4-nlp/nlp1.md
-#  - file: 4-nlp/nlp1_code_spacy.ipynb
+- caption: "特徴量エンジニアリング（テキストデータ）"
+  numbered: true
+  chapters:
+  - file: 4-nlp/nlp1.md
+  - file: 4-nlp/nlp1_code.ipynb
+    title: 特徴量設計1のコード例（動作確認用）
+  - file: 4-nlp/spacy_base.ipynb
+  - file: 4-nlp/spacy_vectorizer.ipynb
+  - file: 4-nlp/spacy_dependency.ipynb
+  - file: 4-nlp/spacy_pn_sentiment.ipynb
+  - file: 4-nlp/spacy_topicmodel.ipynb
+  - file: 4-nlp/spacy_importance.ipynb
 #  - file: 4-nlp/typical_methods.md
 #  - file: 4-nlp/typical_methods_mecab.ipynb
 #  - file: 4-nlp/typical_methods_spacy.ipynb
@@ -52,3 +61,8 @@ parts:
 #  - file: 5-others/frequentpattern/associationrules.ipynb
 #  - file: 5-others/recommendation/recommendation.md
 #  - file: 5-others/recommendation/recommendation_nn.ipynb
+
+- caption: "課題"
+  numbered: true
+  chapters:
+  - file: report/report3_2022.md
