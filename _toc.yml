@@ -6,6 +6,7 @@ parts:
   chapters:
   - file: 1-intro/intro.md
   - file: 1-intro/env.md
+  - file: 1-intro/venv.md
 
 - caption: "機械学習入門"
   numbered: true
@@ -45,12 +46,12 @@ parts:
 #  - file: 4-nlp/typical_methods.md
 #  - file: 4-nlp/typical_methods_mecab.ipynb
 #  - file: 4-nlp/typical_methods_spacy.ipynb
-#  - file: 4-nlp/nlp2.md
+  - file: 4-nlp/nlp2.md
 #  - file: 4-nlp/train_momotaro.ipynb
-#  - file: 4-nlp/nlp3.md
-#  - file: 4-nlp/fine-tuning.ipynb
-#  - file: 4-nlp/fine-tuning-spacy.ipynb
-#    title: ファインチューニング例（spacy版）
+  - file: 4-nlp/nlp3.md
+  - file: 4-nlp/fine-tuning.ipynb
+  - file: 4-nlp/fine-tuning-spacy.ipynb
+    title: ファインチューニング例（spacy版）
 
 #- caption: "タスクとマイニングアルゴリズムの例"
 #  numbered: true

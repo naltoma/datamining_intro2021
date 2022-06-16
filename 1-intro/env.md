@@ -57,6 +57,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
   - 参考: [VSCodeのインストールから実行まで](http://ie.u-ryukyu.ac.jp/~tnal/2021/prog1/vscode.pdf)
 - step 3: 動作確認。
   - 冒頭のサンプルコードで動作確認してみよう。
+- [venv + pip な環境の補足](./venv.md)
 
 ---
 #### condaを使う場合（**推奨しません**）
