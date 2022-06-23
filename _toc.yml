@@ -50,8 +50,11 @@ parts:
 #  - file: 4-nlp/train_momotaro.ipynb
   - file: 4-nlp/nlp3.md
   - file: 4-nlp/fine-tuning.ipynb
+    title: 広義のファインチューニング例（gemsim版）
   - file: 4-nlp/fine-tuning-spacy.ipynb
-    title: ファインチューニング例（spacy版）
+    title: 広義のファインチューニング例（spacy版）
+  - file: 4-nlp/machine_translation.ipynb
+    title: Transformersを用いたファインチューニング例
 
 #- caption: "タスクとマイニングアルゴリズムの例"
 #  numbered: true
