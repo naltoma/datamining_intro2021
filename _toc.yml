@@ -70,3 +70,4 @@ parts:
   numbered: true
   chapters:
   - file: report/report3_2022.md
+  - file: report/report4_2022.md
