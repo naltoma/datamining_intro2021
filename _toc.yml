@@ -56,15 +56,15 @@ parts:
   - file: 4-nlp/machine_translation.ipynb
     title: Transformersを用いたファインチューニング例
 
-#- caption: "タスクとマイニングアルゴリズムの例"
-#  numbered: true
-#  chapters:
-#  - file: 5-others/graph/graph.md
-#  - file: 5-others/graph/graph_example.md
-#  - file: 5-others/frequentpattern/frequentpattern.md
-#  - file: 5-others/frequentpattern/associationrules.ipynb
-#  - file: 5-others/recommendation/recommendation.md
-#  - file: 5-others/recommendation/recommendation_nn.ipynb
+- caption: "タスクとマイニングアルゴリズムの例"
+  numbered: true
+  chapters:
+  - file: 5-others/graph/graph.md
+  - file: 5-others/graph/graph_example.md
+  - file: 5-others/frequentpattern/frequentpattern.md
+  - file: 5-others/frequentpattern/associationrules.ipynb
+  - file: 5-others/recommendation/recommendation.md
+  - file: 5-others/recommendation/recommendation_nn.ipynb
 
 - caption: "課題"
   numbered: true
