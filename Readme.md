@@ -18,6 +18,7 @@
   - [機械学習のための特徴量エンジニアリング――その原理とPythonによる実践](https://www.oreilly.co.jp/books/9784873118680/), 機械学習を具体的なタスクに適用しようとした際に直面する「あるある事例集」。
   - [5.3. Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html)
 - 自然言語処理
+  - [自然言語処理の基礎](https://www.ohmsha.co.jp/book/9784274229008/), オーム社, 2022年8月24日
   - [自然言語処理 (放送大学教材)](https://www.amazon.co.jp/dp/4595319584/)
   - [ゼロから作るDeep Learning ――Pythonで学ぶディープラーニングの理論と実装](https://www.oreilly.co.jp/books/9784873117584/)
   - [ゼロから作るDeep Learning ❷ ――自然言語処理編](https://www.oreilly.co.jp/books/9784873118369/)

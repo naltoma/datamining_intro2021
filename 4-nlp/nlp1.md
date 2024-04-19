@@ -65,7 +65,7 @@
   - 意味カテゴリ関係：沖縄、東京といった都道府県。
   - 属性関係：當間と、當間が受け持つ授業。
 - シソーラスの例
-  - WordNet: [ [英オリジナル](https://wordnet.princeton.edu) | [日本語版](http://compling.hss.ntu.edu.sg/wnja/) ]
+  - WordNet: [ [英オリジナル](https://wordnet.princeton.edu) | [日本語版](https://bond-lab.github.io/wnja/) ]
     - 語を類義関係のセット (synset)でグループ化し、簡単な定義（説明文）と、他の同義語との関係が記述されている。
   - [日本語評価極性辞書](http://www.cl.ecei.tohoku.ac.jp/index.php?Open%20Resources%2FJapanese%20Sentiment%20Polarity%20Dictionary)
     - 用言を中心に収集した評価表現約5千件について、極性（ポジティブorネガティブ）をまとめたデータセット。
@@ -106,6 +106,14 @@
     - ![DBpediaで歌川広重に紐付けられているデータの例（[DBpediaの現在：リンクトデータ・プロジェクト](https://www.jstage.jst.go.jp/article/johokanri/60/5/60_307/_pdf)から転載](./figs/dbpedia.png)
   - [Wikipedia 構造化データ「森羅」構築に向けて - 言語処理学会](https://anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P7-3.pdf)
     - [森羅2019データ配布](http://liat-aip.sakura.ne.jp/森羅/森羅wikipedia構造化プロジェクト2019/森羅2019データ配布/)
+
+---
+### 検討：特徴量表現の観点から考えてみる
+既に数値やカテゴリを用いた特徴量エンジニアリングについて触れてきた。例えば[図形のクラスタリング](feature-vector)では、形状でクラスタを構築したいならば $f_1(x)$を丸である場合に1、$f_2(x)$を三角である場合に1、$f_3(x)$を四角である場合に1とする特徴量関数を設計し、これらで得られる値をベクトルとしてまとめたものが特徴ベクトルであった。
+
+ここで、商品レビューにかかれている内容がポジティブとネガティブのどちらであるかを判定するモデルを構築したい状況について検討してみよう。商品レビューはAmazonや楽天等のレビュー記事のようなものを想定する。例えば、書籍「自然言語処理の基礎」には[このようなレビュー](https://www.amazon.co.jp/gp/customer-reviews/R3V659JIZJ87LO/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=4274229009)がある。ただし利用できる情報は文章のみであり、☆の数を含む数値情報は利用できないものとする。
+
+上記レビュー文はあくまでも一例である。このレビュー文は文章を理解できる人にとってはポジティブに評価していると解釈できるだろう。このことを特徴量設計により数値変換する関数例を検討せよ。ただし[日本語WordNet](https://bond-lab.github.io/wnja/)を情報源として用いるものとする。
 
 ---
 ## カウントベースの手法

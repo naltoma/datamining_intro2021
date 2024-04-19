@@ -19,18 +19,18 @@
 >
 > by Tom Mitchell, ["The Discipline of Machine Learning"](http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf)
 
-ある特定のタスクT、パフォーマンス評価指標となるP、得られた経験Eに基づいて学習することで、そのパフォーマンスを改善しうるシステムのことを機械学習と呼ぶ。
+ある特定のタスクT、パフォーマンス評価指標となるP、得られた経験Eに基づいて学習することで、そのパフォーマンスを改善しうるシステムのことを **{index}`機械学習<きかいがくしゅう-機械学習>`** と呼ぶ。
 
 これらの定義は抽象的で分かりづらいが、そもそも機械学習とは何かしらの入出力関係で表現される事象をうまく表現するための手法全般を指すことが多い。入出力関係で表現される事象とは例えば、過去1年間の最大気温推移（これが入力）から今年の推移（これが出力）を推測したいというように、入力と出力とがペアとなるように用意されたデータセットと看做すことができる。このように用意されたデータセットにおいて入出力関係の傾向を見出し、用意されなかった入力から出力を推測しようとするのが機械学習である。
 
 ```{tip}
-良くも悪くも、教師あり機械学習は入出力関係の傾向をモデル化しようとするするだけである。機械学習自体は本来の事象を観察することなく、与えられたデータセットだけから傾向を捉えようとする。この行為を例えると、一度きりの又聞き(=用意したデータセット)だけで事象を理解しようとしている状況に近い。
+良くも悪くも、教師あり機械学習は入出力関係の傾向をモデル化しようとするだけである。機械学習自体は本来の事象を観察することなく、与えられたデータセットだけから傾向を捉えようとする。この行為を例えると、一度きりの又聞き(=用意したデータセット)だけで事象を理解しようとしている状況に近い。
 
 例として、とある政党が新しい政策を提唱している状況を想像してみよう。この政策を理解するためには背景・経緯・方針・方策等を含む提案書を読み解く必要があるだろう。このとき説明が不十分であるならばその点について尋ねたり、欠落している観点を指摘したり、発案政党以外の第三者と議論を行う等のフィードバックを得ながら十分な理解に繋げていくことだろう。つまり政策という事象を理解するためには、事象に対する直接的なフィードバックが必要だ。
 
-これに対し機械学習というシステムは、実証研究を除き、原則として事象に対するフィードバックは行うことができない。問題解決したい人が、その人のポリシーに則って用意したデータセットのみを観測することができる。このデータセットは何かしら偏っている可能性が高く、観測誤りも含まれるだろう。言い換えると、データセットは事象そのものを表してはおらず、事象を観測したユーザの観測ポリシーや観測誤差等の「事象とは異なる要因」を含んだものになっている。加えてそのユーザとやりとりすることもできない。このように「一度きりの又聞きだけで理解しよう」とするため、本来の事象とは異なる傾向を得てしまうことがしばしばある。この問題は **過学習 (overfitting)** と呼ばれ、一般人ならば起こし得ない誤りを出力してしまうことがしばしばある。
+これに対し機械学習というシステムは、実証研究を除き、原則として事象に対するフィードバックは行うことができない。問題解決したい人が、その人のポリシーに則って用意したデータセットのみを観測することができる。このデータセットは何かしら偏っている可能性が高く、観測誤りも含まれるだろう。言い換えると、データセットは事象そのものを表してはおらず、事象を観測したユーザの観測ポリシーや観測誤差等の「事象とは異なる要因」を含んだものになっている。加えてそのユーザとやりとりすることもできない。このように「一度きりの又聞きだけで理解しよう」とするため、本来の事象とは異なる傾向を得てしまうことがしばしばある。この問題は **{index}`過学習<かがくしゅう-過学習>` ({index}`overfitting`)** と呼ばれ、一般人ならば起こし得ない誤りを出力してしまうことがしばしばある。
 
-代表的な誤りの例として **敵対的サンプル (adversarial attack)** がある。
+代表的な誤りの例として **{index}`敵対的サンプル<てきたいてきさんぷる-敵対的サンプル>` ({index}`adversarial attack`)** がある。
 - 例: [第2回 ～　AIを騙す攻撃 – 敵対的サンプル -　～](https://jpsec.ai/attacks-that-deceive-ai/)
 
 このように機械学習が獲得するモデルは誤りを含むため、業務システムとして運用するにはこのことを前提とした運用プロセスを検討することが重要である。このことは [MLOps](https://ja.wikipedia.org/wiki/MLOps) と呼ばれ、盛んに活用事例をベースに議論が行われている最中である。
@@ -48,7 +48,7 @@
 >
 > by [Machine Leaning: the problem setting](http://scikit-learn.org/stable/tutorial/basic/tutorial.html)
 
-n個のサンプルからなるデータセットを用意し、未知データの特性を予測しようと試みる。もし、各サンプルが2個以上の数値で構成されているなら、そのサンプルを多次元データ（＝ベクトル）と呼ぶ。この場合、各ベクトルを構成する個々の要素を**属性**、もしくは**特徴**と呼ぶ。
+n個のサンプルからなるデータセットを用意し、未知データの特性を予測しようと試みる。もし、各サンプルが2個以上の数値で構成されているなら、そのサンプルを多次元データ（＝ベクトル）と呼ぶ。この場合、各ベクトルを構成する個々の要素を **{index}`属性<ぞくせい-属性>`**、もしくは **{index}`特徴<とくちょう-特徴>`** と呼ぶ。
 
 一般には、そもそも単一特徴であることはほぼ無い。ただし、アルゴリズムの理解を促すため等、特定条件下においては単一特徴からなるサンプル、すなわちスカラーを用いることがある。
 
@@ -58,21 +58,21 @@ n個のサンプルからなるデータセットを用意し、未知データ�
 - [Business Intelligence and its relationship with the Big Data, Data Analytics and Data Science](https://www.linkedin.com/pulse/business-intelligence-its-relationship-big-data-geekstyle/)
 - [Choosing the right estimator](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
 
-- **教師あり学習（supervised learning）**
-  - **分類（classification）**
+- **{index}`教師あり学習<きょうしありがくしゅう-教師あり学習>`（{index}`supervised learning`）**
+  - **{index}`分類<ぶんるい-分類>`（{index}`classification`）**
     - In Classification, the samples belong to two or more classes and we want to learn from already labeled data how to predict the class of unlabeled data.
-    - モデルの出力がカテゴリ値（数値ではない）
-  - **回帰（regression）**
+    - モデルの出力がカテゴリやラベル（数値ではない）
+  - **{index}`回帰<かいき-回帰>`（{index}`regression`）**
     - If the desired output consists of one or more continuous variables, then the task is called regression.
     - モデルの出力が連続値
-- **教師なし学習（unsupervised learning）**
-  - **クラスタリング（clustering）**
+- **{index}`教師なし学習<きょうしなしがくしゅう-教師なし学習>`（{index}`unsupervised learning`）**
+  - **{index}`クラスタリング<くらすたりんぐ-クラスタリング>`（{index}`clustering`）**
     - Clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters).
     - 類似したものをグループにまとめる
-  - **次元削減（dimensionality reduction）**
+  - **{index}`次元削減<じげんさくげん-次元削減>`（{index}`dimensionality reduction`）**
     - PCA is used to decompose a multivariate dataset in a set of successive orthogonal components that explain a maximum amount of the variance.
     - 分散の最大量を説明しやすい、直行成分上の空間に圧縮するために使われる。
-- **強化学習（reinforcement learning）**
+- **{index}`強化学習<きょうかがくしゅう-強化学習>`（{index}`reinforcement learning`）**
   - Reinforcement learning (RL) is an area of machine learning concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward.
   - 累積報酬最大化のために取るべき行動を獲得するための手法。
 
@@ -125,6 +125,7 @@ n個のサンプルからなるデータセットを用意し、未知データ�
 5. 用意したデータセットとモデルを使って、どのように学習しているだろうか？
 6. 学習済みモデルの評価をどのようにしているだろうか？
 7. 学習済みモデルは、学習した結果何を得ているのだろうか？
+8. 新しい患者のデータを入手したとする。その患者の標準化されたBMI値は 0.0 であった。この患者に対する糖尿病進行度合いの予測値はどのぐらいだろうか？
 ````
 
 ---
@@ -144,40 +145,100 @@ n個のサンプルからなるデータセットを用意し、未知データ�
 
 <hr>
 
-## **課題レポート1：機械学習してみよう**
-一般公開されているデータセットから、分類タスクのデータセットを一つ選び、以下の課題に取り組め。なおデータセットは次に示す条件を満たすものとする。
-- データセット条件
-  - Web上で一般公開されているデータセットであること。
-  - 登録日2010年以降であること。
-    - データセットの掲載日が不明な場合には、そのデータセットを用いている論文の掲載日とする。どちらも不明な場合は、事前に個別相談すること。
-  - 各サンプルの特徴が3個以上（特徴ベクトルが3次元以上）であること。
-  - 過半数の特徴が **数値データ（量的変数）** であること。全部である必要はなく、一部の特徴がそれ以外（名義尺度、順序尺度、カテゴリ、テキスト等）であっても良い。
-    - よくある間違い
-      - カテゴリ情報として0, 1, 2,,,のような数値が書かれていることを「量的変数」と捉えるのは誤り。例えば天候情報として晴れを0、曇りを1、雨を2、、のように数値を割り振って表現することはあるが、これは量的変数ではない。
-- レポート締め切り（全体で3週間）
-  - Level 1, 2 は課題提示から1週間後。ファイル名を「level1,2」とすること。
-  - Level 3, 4 はそれから2週間後。ファイル名を「level3,4」とすること。
-- Level 1. どのようなデータセットなのか、100〜200字程度で概説せよ。
-- Level 2. データセットを構成する各要素（下記）について、各々1行程度で簡潔に解説せよ。
-    - サンプル数
-    - 特徴ベクトルの次元数
-    - 各特徴の説明とデータ形式（原則全て。ただし5次元以上の場合は「自身判断で有用だと思える特徴5種類」まで説明すること）
-    - 分類クラス数
-    - クラスの説明（原則全て。ただし5種類以上の場合は「自身判断で有用だと思えるクラス5種類」まで説明すること）
-- Level 3. 分類学習に用いるモデルを選べ。
-    - レポートには、選んだモデルと、2個程度のハイパーパラメータについて簡潔に解説せよ。パラメータ解説は直訳程度で構わない。
-      - モデルは分類タスクに適用できるものから自由に選んで構わない。[Flow Chart](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)を参考にするのも良い。
-        - ここではscikit-learnを想定して記述しているが、Keras等、別の機械学習ライブラリを用いても良い。
-      - モデルを選んだら、一度ドキュメントを参照し、簡単な使い方やハイパーパラメータについて確認しよう。例えば[sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)なら、**Parameters**欄に並んでいる引数は手動調整可能である。**Examples**欄には使い方の例が示されている。**Methods**欄には、このオブジェクトが持っている関数が示されている。
-- Level 4. 実際にコードを書いて分類学習せよ。
-    - 今回の意図は、全体の流れを理解することである。実験結果が悪くても構わないので、流れを理解しながら取り組もう。レポートには主要コード上限50行を示し、解説せよ。また分類結果についても示し、解説せよ。
-      - データセットをダウンロードし、training set と testing set に分けよう（最初から分けられているデータセットの場合にはその設定に従おう）。なお、学習に要する時間が1時間を超える場合にはサンプル数もしくは次元数を適宜削減しても良いものとする。削減した際にはその理由とどう削減したのかを報告すること。
-      - [分類タスクのコード例](https://scikit-learn.org/stable/auto_examples/index.html#classification)を参考に、学習させてみよ。
-      - 学習済みモデルを用いて、テストデータに対する評価を行え。ここで、評価は「サンプル毎に分類成功したか否か」に基づいた精度により行うものとする。例えば、100サンプル中1個成功したのなら、精度は1%である。
-- Options：余裕があれば取り組んでみよう
-    - 例1: 混同行列（[confusion matrix](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py)）により、精度の良し悪しに偏りのあるクラスがあるかどうかを確認してみよう。
-    - 例2: 失敗事例について要因分析してみよう。
-    - 例3: 選択したモデルにハイパーパラメータ（手動調整するパラメータ）があるならば、それをチューニングして精度改善を試みてみよう。
+(report1)=
+## 課題レポート1：機械学習してみよう
+[Secondary Mushroom](https://archive.ics.uci.edu/dataset/848/secondary+mushroom+dataset)からデータをダウンロードし、以下の課題に取り組め。
+### Level 0: 準備。（報告不要）
+- (a) ダウンロード。
+  - ``risk+factor+prediction+of+chronic+kidney+disease.zip`` というファイルがダウンロードされるはずだ。
+- (b) zipファイルの展開。
+  - 展開すると ``MushroomDataset`` フォルダが作成される。フォルダ内に以下の4件のテキストファイルが入っていることを確認しよう。
+    - ``primary_data_meta.txt``: primary_data.csvに関する説明書。
+    - ``primary_data.csv``: `;`を区切り文字としたCSVファイル。
+    - ``secondary_data_meta.txt``: secondary_data.csvに関する説明書。
+    - ``secondary_data.csv``: `;`を区切り文字としたCSVファイル。<u>今回利用するのはこちら。</u>
+
+### Level 1. データセット調査。（15分想定）
+Secondary Mushroomがどのようなデータセットなのか概説せよ。少なくとも以下の内容を含めること。
+- タスク種別は何か。
+- 何を目的として収集または構築したのか。
+
+```{hint}
+おおよその説明はWebページと secondary_data_meta.txt に書かれています。
+興味のある人は論文（Introductory Paper）も覗いてみるとよいでしょう。
+```
+
+### Level 2. 特徴量調査。（1時間想定）
+データセットを構成する各要素（下記）について、各々1行程度で簡潔に解説せよ。
+- サンプル数
+- 分類クラス数
+- クラスの説明
+- 特徴ベクトルの次元数
+- 各特徴の説明とデータ形式
+  - noimnalな特徴を2件、metricalな特徴を2件、それぞれ選択し、分かる範囲で説明すること。
+
+```{hint}
+- secondary_data_meta.txtの5番目に「Class infomation」があり、これがクラスに関する説明をしています。
+- 同じファイルの6番目に「Variable Information」があり、これが説明変数すなわち特徴について説明をしています。
+```
+
+### Level 3. 分類学習に用いるモデルを選べ。（15分想定）
+レポートには、(a) 選んだモデルの名前と、(b) 2個程度のハイパーパラメータについて簡潔に解説せよ。パラメータ解説は直訳程度で構わない。
+
+```{hint}
+モデルは分類タスクに適用できるものから自由に選んで構わない。[Flow Chart](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)を参考にするのも良い。
+- ここではscikit-learnを想定して記述しているが、Keras等、別の機械学習ライブラリを用いても良い。
+- モデルが持つパラメータは大別して次の2種類に分けられます。
+  - **{index}`ハイパーパラメータ`**: 開発者自身が手動で設定する必要があるパラメータ。例えばクラスタリングの多くのアルゴリズムでは、クラスタ数を手動で設定する必要があります。
+  - 上記以外のパラメータ（重みとも呼ばれる）: 学習データから自動で獲得するパラメータ。例えば線形回帰モデル $y = ax + b$ におけるa,bは、学習データから自動で求めます。
+- モデルを選んだら、一度ドキュメントを参照し、簡単な使い方やハイパーパラメータについて確認しよう。例えば[sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)なら、**Parameters**欄に並んでいる引数は手動調整可能である。**Examples**欄には使い方の例が示されている。**Methods**欄には、このオブジェクトが持っている関数が示されている。
+```
+
+### Level 4. 実際にコードを書いて分類学習せよ。（1〜3時間想定）
+今回の意図は、全体の流れを理解することである。実験結果が悪くても構わないので、流れを理解しながら取り組もう。レポートには (a) 主要コード上限50行を示し、解説せよ。また (b) 分類結果についても示し、解説せよ。
+- 条件
+  - Level 2で調査したとおり、説明変数には数値データ（metrical）とそうではないデータ（nominal）が混在している。今回は metrical だけを説明変数として利用すること。
+  - 特徴量は何も処理を加えずそのまま用いること。
+  - 評価は5分割検定の平均値とすること。
+
+````{hint}
+- Google Colab で外部ファイルを読み込む方法
+  - (1) ファイルをアップロードする。
+    - ノートブックを開き、左の「ファイル」アイコンをクリック。
+    - 「セッションストレージにアップロード」をクリックし、ファイルを選択。
+  - (2) Pythonでファイルを読み込む。
+    - 多くの場合は csv ファイル, tsv ファイル, Excelファイルだろう。ファイルに応じてコードが変わる。
+    - また、ファイル内にヘッダ（列名）があるかどうかでも変わってくる。
+```Python
+# case 1: csvファイル
+import pandas as pd
+filename = 'test.csv' # アップロードしたファイル名を指定
+df = pd.read_csv(filename, header=0) # ヘッダがある場合
+df = pd.read_csv(filename, header=None) # ヘッダがない場合
+
+# case 2: tsvファイル
+import pandas as pd
+filename = 'test.tsv' # アップロードしたファイル名を指定
+df = pd.read_csv(filename, sep='\t', header=0) # ヘッダがある場合
+df = pd.read_csv(filename, sep='\t', header=None) # ヘッダがない場合
+
+# case 3: Excelファイル（拡張子が ``.xlsx``）
+import pandas as pd
+filename = 'test.xlsx' # アップロードしたファイル名を指定
+df = pd.read_excel(filename, header=0) # ヘッダがある場合
+df = pd.read_excel(filename, header=None) # ヘッダがない場合
+```
+
+- 分類タスクのコード例
+  - [scikit-learn公式例](https://scikit-learn.org/stable/auto_examples/index.html#classification)
+  - 授業資料例
+    - [ダウンロードしたデータセットに機械学習を適用する流れ](./intro_ml_flow.ipynb)
+````
+
+### Options：余裕があれば取り組んでみよう
+- 例1: 混同行列（[confusion matrix](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py)）により、精度の良し悪しに偏りのあるクラスがあるかどうかを確認してみよう。
+- 例2: 失敗事例について要因分析してみよう。
+- 例3: 選択したモデルにハイパーパラメータ（手動調整するパラメータ）があるならば、それをチューニングして精度改善を試みてみよう。
 
 ```{note}
 データセット次第では、それをどのように読み込めばよいのか、読み込んだデータをどのように特徴ベクトルとして利用するのかを検討すること自体が難しいこともあり得る。相談場をTeamsに用意するので積極的に活用しよう。

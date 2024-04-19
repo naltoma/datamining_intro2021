@@ -6,12 +6,22 @@
     - (1) **コード例を読んで、実行して、動作を確認しながら自分なりにカスタマイズして利用する力**。
     - (2) ライブラリの使い方を検索し、使う力。
 - プログラミング言語としては Python を使う。
-  - ただしC言語やJava等で条件分岐、ループ処理、関数定義、配列処理あたりをしたことがあるなら、Python自体が初めてでも対応可能な範囲だと思われる。Python初心者ならば、[Progate](https://prog-8.com/)での事前勉強を強く勧める。じっくり取り組みたいのであれば、[知能情報コース「プログラミング1」](https://ie.u-ryukyu.ac.jp/~tnal/2021/prog1/static/Readme.html)も参考になるだろう。
+  - ただしC言語やJava等で条件分岐、ループ処理、関数定義、配列処理あたりをしたことがあるなら、Python自体が初めてでも対応可能な範囲だと思われる。Python初心者ならば、[Progate](https://prog-8.com/)での事前勉強を強く勧める。じっくり取り組みたいのであれば、[知能情報コース「プログラミング1」](https://ie.u-ryukyu.ac.jp/~tnal/2024/prog1/static/Readme.html)も参考になるだろう。
+
+---
+## ファイル名の拡張子を表示する
+macOS, Windowsを問わず、どちらも標準設定ではファイル名の拡張子を隠す設定になっている。これが原因となり「同じファイル名が複数あるが、どれが何を保存しているのか良く分からない」状況になることが多いし、セキュリティ上も拡張子を表示しておいたほうが良い。
+
+- ファイル拡張子の表示
+    - Windows: [Windows の一般的なファイル名拡張子](https://support.microsoft.com/ja-jp/windows/windows-の一般的なファイル名拡張子-da4a4430-8e76-89c5-59f7-1cdbbc75cb01)
+        - エクスプローラーを起動する。「表示」タブの「表示/非表示」グループを選び、「ファイル名拡張子」にチェックを付ける。
+    - macOS:[Macでファイル名拡張子を表示する/非表示にする](https://support.apple.com/ja-jp/guide/mac-help/mchlp2304/mac)
+        - Finderを起動する。「設定」メニューから「詳細」を選び、「すべてのファイル名拡張子を表示」を選択する。
 
 ---
 ## 開発環境の前に
 - 知能情報学生
-  - e18, e19, e20 の学生は Anaconda もしくは Miniconda で環境構築済みのはず。**残念ながら、conda環境では一部のプログラム(自然言語処理, spacy)が動作しません**。「開発環境の設定」を参考に、pipで環境構築してください。
+  - e18, e19, e20, e22 の学生は Miniconda で環境構築済みのはず。**残念ながら、conda環境では一部のプログラム(自然言語処理, spacy)が動作しない可能性があります**。「開発環境の設定」を参考に、pipで環境構築することを推奨します。
   - e21学生は pip + venv で部分的に環境構築済みのはず。適宜モジュールをインストールしよう。
 - 他コース学生
   - 環境が全くわからないため、まずは動作確認をしてみよう。一度もPythonプログラミング環境を構築したことがないのであれば動作確認をスキップして、環境構築からやろう。
@@ -19,14 +29,15 @@
 ---
 ## 動作確認
 - step 1: サンプルコードの用意。
-  - [The Iris Dataset](http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)にある ``plot_iris_dataset.py`` をダウンロード。
+  - [The Iris Dataset](http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)にある　``plot_iris_dataset.ipynb`` か、もしくは ``plot_iris_dataset.py`` をダウンロード。
+    - 拡張子が ``.ipynb`` が Jupyter Notebook 形式。Google Colab上で実行する際にはこちらを選ぼう。
 - step 2: VSCodeか、Pythonインタプリタで実行。
   - step 1のサイト上に掲載されているように2つのグラフが生成されたらOK。
 
 何かしらのエラーが出るなら、エラーに基づいて対応が必要。ググるなり當間なりに相談ください。以下は、ゼロから環境構築する場合（macOS編, Windows編）についてと、Google Colabを使う例を示します。
 
 ```{note}
-- おまけ: [デバッグ実行入門](https://ie.u-ryukyu.ac.jp/~tnal/2021/prog1/static/debug.html)
+- おまけ: [デバッグ実行入門](https://ie.u-ryukyu.ac.jp/~tnal/2024/prog1/static/debug.html)
 
 動作確認しながらコードを読み進めるためにデバッガの利用（デバッグ実行）に慣れることを推奨します。
 ```
@@ -35,18 +46,18 @@
 ## 開発環境の設定
 ### ゼロから環境構築：macOS編
 - 想定
-  - macOS: 11.6以降。
-    - 10.14ぐらいでも恐らく問題ないが、未確認。
-  - Python: 3.8〜3.9系
-    - 2021年4月時点では、3.9系は避けたほうが良い。
-    - 2022年4月時点では 3.9系 stable 版で大丈夫かも。安心を求めるなら 3.8系 stable 版推奨。ただし、spacyのM1最適化版を使いたいなら 3.9 必須。
+  - macOS: 13.x以降。
+    - 12.xぐらいでも恐らく問題ないが、未確認。
+  - Python: 3.9〜3.11系。
+    - 2024年4月時点では、3.12系は避けたほうが良い。（参考: <a href="https://pytorch.org/get-started/locally/">PyTorch PREREQUISITES</a>）
 
 ---
 #### pip を使う場合
 - step 1: Python仮想環境を構築。
+以下では ``~/.venv/dm/`` 以下に仮想環境を構築しようとしている例です。
 ```shell
 which python3 # /usr/bin/python3 想定
-python3 -m venv ~/.venv/dm
+/usr/bin/python3 -m venv ~/.venv/dm
 source ~/.venv/dm/bin/activate
 which python # ~/.venv/bin/python 想定
 pip install --upgrade pip
@@ -54,7 +65,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
 ```
 
 - step 2: VSCodeをインストール。
-  - 参考: [VSCodeのインストールから実行まで](http://ie.u-ryukyu.ac.jp/~tnal/2021/prog1/vscode.pdf)
+  - 参考: [VSCodeのインストールから実行まで](http://ie.u-ryukyu.ac.jp/~tnal/2023/prog1/vscode.pdf)
 - step 3: 動作確認。
   - 冒頭のサンプルコードで動作確認してみよう。
 - [venv + pip な環境の補足](./venv.md)
@@ -87,9 +98,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
 ---
 ### ゼロから環境構築：Windows編
 - 想定
-  - Python: 3.8〜3.9系
-    - 2021年4月時点で3.9系は避けたほうが良い。
-    - 2022年4月時点では 3.9系 stable 版で大丈夫かも。安心を求めるなら 3.8系 stable 版推奨。
+  - Python: 3.9〜3.11系
 - 大別して WSL2 により Linux系OSをインストールしてそこで環境構築するか、Windows上で直接環境構築するかの選択肢がある。
 
 ```{warning}
@@ -137,3 +146,41 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab
     - 1回目の実行は、環境構築のため時間がかかります。
 - step 5: 動作確認。
   - 冒頭のサンプルコードで動作確認してみよう。
+
+---
+## Python演習のための準備
+### Pythonとは
+プログラミング言語の一種。データサイエンスや機械学習（≒AI）を中心に広まってきました。ファイル名の拡張子は ``.py``（スクリプトファイル）, ``.ipynb``（ノートブック）。授業ではノートブックで開発をするため、拡張子は .ipynb を使います。
+
+(colab)=
+### Google Colabratory
+通称 Google Colab。Googleのアカウント（無料）を作成することで、誰でもブラウザ上でプログラムを編集したり実行したりすることができるようになる。個別にPCへインストールする必要がなく、同じ環境を利用することができることから授業での利用も広まってきた。使いやすいが、Google Colab特有の使いづらさもあることに注意。
+
+- 特徴
+    - ユーザからのリクエストが届くと、Googleが固有の実行環境（仮想マシン）をクラウド上に用意します。ユーザは用意された仮想マシン内でノートブックを実行することになります。
+- 利点
+    - ネットワーク接続できるPCならば、いつでも誰でも同一環境で演習することが可能。
+    - プログラムと実行結果を一つのファイルにまとめることが可能。
+    - 実行し終えた状態で続きのプログラムを書き、続けて実行することができる。
+- 欠点
+    - 一定時間アイドル状態（操作していない状態）が続くと、仮想マシンが削除されます。削除されてしまった場合には、改めて冒頭から実行し直す必要があります。
+    - 連続実行時間は最長12時間。無料アカウントでこれ以上長く利用することはできませんし、有料でも最長24時間の制限があります。
+
+### Google Colabratoryを使う準備
+- Googleのアカウントを作成。
+    - 個人アカウントを既に持っている人は、それを流用して構いません。今回の授業用に別途作成しても構いません。やりやすい方でアカウントを用意してください。
+- case 1: colab経由でノートブック作成する。
+  - [Colabratory](https://colab.research.google.com/)にアクセス。
+  - 画面左上の「ファイル」メニューをクリックし、「ノートブックを新規作成」を選ぶ。
+- case 2: googleドライブ上でノートブック作成する。
+  - googleドライブを開く。（[google](https://www.google.com/)にアクセスし、アプリから「ドライブ」を選ぶ）
+  - 「+新規」から「その他」=>「Google Colabratory」を選ぶ。
+
+### 基本的な使い方
+- 動作確認
+  - ``print("Hello, world!")`` と書き、左側にある実行ボタンをクリック。
+  - その下に Hello, world! と出力されたらOK。
+- セル単位で実行する。
+- セルには「テキストセル（Markdown）」と「コードセル（Python）」がある。
+- Markdown
+    - [Markdown記法 サンプル集](https://qiita.com/tbpgr/items/989c6badefff69377da7)

@@ -71,3 +71,7 @@ parts:
   chapters:
   - file: report/report3_2022.md
   - file: report/report4_2022.md
+
+- caption: "付録"
+  chapters:
+  - file: genindex
