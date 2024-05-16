@@ -16,10 +16,11 @@ parts:
     title: コード例（線形回帰）
   - file: 2-ml-intro/intro_ml_flow.ipynb
     title: コード例（ダウンロードしたデータセットに機械学習を適用する流れ）
+  - file: 2-ml-intro/intro_pandas.ipynb
   - file: 2-ml-intro/intro_numpy.ipynb
   - file: 2-ml-intro/intro_matplotlib.ipynb
   - file: 2-ml-intro/data_wrangling.ipynb
-    title: pandas入門＋推薦システムの例
+    title: (おまけ) pandasで推薦システム構築する例
   - file: 2-ml-intro/ml-intro2.md
   - file: 2-ml-intro/gradient_descent.ipynb
 
