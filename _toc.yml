@@ -39,6 +39,7 @@ parts:
   - file: 4-nlp/nlp1_code.ipynb
     title: 特徴量設計1のコード例（動作確認用）
   - file: 4-nlp/spacy_base.ipynb
+  - file: 4-nlp/spacy_countvectorizer.ipynb
   - file: 4-nlp/spacy_vectorizer.ipynb
   - file: 4-nlp/spacy_dependency.ipynb
   - file: 4-nlp/spacy_pn_sentiment.ipynb
