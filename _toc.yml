@@ -71,7 +71,7 @@ parts:
 - caption: "課題"
   numbered: true
   chapters:
-  - file: report/report3_2022.md
+  - file: report/report3_2024.md
   - file: report/report4_2022.md
 
 - caption: "付録"
