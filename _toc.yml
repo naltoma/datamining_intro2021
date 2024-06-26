@@ -57,6 +57,12 @@ parts:
     title: 広義のファインチューニング例（spacy版）
   - file: 4-nlp/machine_translation.ipynb
     title: Transformersを用いたファインチューニング例
+  - file: 4-nlp/intro_huggingface.md
+    title: Transformer (Hugging Face) 演習を兼ねた入門
+  - file: 4-nlp/sample-pipeline.ipynb
+    title: pipelineを用いた推定例
+  - file: 4-nlp/jrte_pn_bert_train.ipynb
+    title: AutoModelForSequenceClassificationを用いたファインチューニング例
 
 - caption: "タスクとマイニングアルゴリズムの例"
   numbered: true
@@ -72,7 +78,7 @@ parts:
   numbered: true
   chapters:
   - file: report/report3_2024.md
-  - file: report/report4_2022.md
+  - file: report/report4_2024.md
 
 - caption: "付録"
   chapters:
