@@ -79,6 +79,7 @@ parts:
   chapters:
   - file: report/report3_2024.md
   - file: report/report4_2024.md
+  - file: report/report5_2024.md
 
 - caption: "付録"
   chapters:
