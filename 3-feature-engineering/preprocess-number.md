@@ -209,4 +209,4 @@ Level 1. [preprocess_numerical.ipynb](./preprocess_numerical.ipynb)を参考に�
 ---
 ## 予習：カテゴリデータの前処理
 - カテゴリデータに対する前処理（特徴として扱うための方法）について概説している[5.3.4. Encoding categorical features](https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features)を読み、自分なりに疑問点等気になる事柄を整理せよ。
-  - 疑問等は、次回授業の前日までに、別途用意するフォームに入力すること。
+  - 疑問等は、次回授業の前日までに、Teamsに入力すること。

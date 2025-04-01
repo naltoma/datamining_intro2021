@@ -19,10 +19,9 @@ macOS, Windowsを問わず、どちらも標準設定ではファイル名の拡
         - Finderを起動する。「設定」メニューから「詳細」を選び、「すべてのファイル名拡張子を表示」を選択する。
 
 ---
-## 開発環境の前に
+## PC本体に開発環境を構築する場合
 - 知能情報学生
-  - e18, e19, e20, e22 の学生は Miniconda で環境構築済みのはず。**残念ながら、conda環境では一部のプログラム(自然言語処理, spacy)が動作しない可能性があります**。「開発環境の設定」を参考に、pipで環境構築することを推奨します。
-  - e21学生は pip + venv で部分的に環境構築済みのはず。適宜モジュールをインストールしよう。
+  - 2020〜2023年頃は一部condaでの動作が怪しかったですが、現在は　pip, condaどちらでも大丈夫なはず。
 - 他コース学生
   - 環境が全くわからないため、まずは動作確認をしてみよう。一度もPythonプログラミング環境を構築したことがないのであれば動作確認をスキップして、環境構築からやろう。
 
@@ -46,10 +45,10 @@ macOS, Windowsを問わず、どちらも標準設定ではファイル名の拡
 ## 開発環境の設定
 ### ゼロから環境構築：macOS編
 - 想定
-  - macOS: 13.x以降。
-    - 12.xぐらいでも恐らく問題ないが、未確認。
-  - Python: 3.9〜3.11系。
-    - 2024年4月時点では、3.12系は避けたほうが良い。（参考: <a href="https://pytorch.org/get-started/locally/">PyTorch PREREQUISITES</a>）
+  - macOS: 14.x以降。
+    - 13.xぐらいでも恐らく問題ないが、未確認。
+  - Python: 3.9〜3.12系。
+    - 2025年3月時点では、3.13系は避けたほうが良い。（参考: <a href="https://pytorch.org/get-started/locally/">PyTorch PREREQUISITES</a>）
 
 ---
 #### pip を使う場合
@@ -72,11 +71,11 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
 
 ---
 #### condaを使う場合（**推奨しません**）
-2022年4月時点では、condaでは[自然言語処理ライブラリspacy](https://spacy.io/)が動作しません。前述の pip を推奨します。
+2022年4月時点では、condaでは[自然言語処理ライブラリspacy](https://spacy.io/)が動作しません。前述の pip を推奨します。2025年3月時点では大丈夫だと思います（未確認）。
 
 - step 1: [Anaconda公式サイト](https://www.anaconda.com)から自分にあったインストーラを選んでインストール。
 - step 2: Pythonインタプリタのパスを確認。
-  - ``which python``
+  - ``which python`` もしくは ``which python3``
   - 恐らく anaconda なり miniconda なりの名称を含むパスが表示されるはず。それをコピーしておこう。
 - step 3: VSCodeをインストール。
   - [VSCode公式サイト](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)から自分にあった版をダウンロード。
@@ -98,7 +97,7 @@ pip install scikit-learn pandas matplotlib seaborn jupyterlab ginza ja_ginza
 ---
 ### ゼロから環境構築：Windows編
 - 想定
-  - Python: 3.9〜3.11系
+  - Python: 3.9〜3.12系
 - 大別して WSL2 により Linux系OSをインストールしてそこで環境構築するか、Windows上で直接環境構築するかの選択肢がある。
 
 ```{warning}
