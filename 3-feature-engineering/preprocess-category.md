@@ -26,6 +26,7 @@
 ---
 ## 基本的な変換方法
 
+(one-hot-encoding)=
 ### One-Hot表現（One-Hot encoding）。
 - 例えば3つのカテゴリがあるならば、それぞれのカテゴリに属しているか否かを 0 or 1 で記述するために、3つの特徴（3次元の特徴）を用意しよう。その上で、実際に属しているカテゴリのみ1とし、それ以外を 0 とする。
   - One-Hot表現を拡張した表現方法として、[ダミーコーディング（dummy coding）](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html)や[Effectコーディング（Effect coding）](https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-effect-coding/)、[バイナリコーディング(Binary docing)](https://contrib.scikit-learn.org/category_encoders/binary.html)があり、特徴は異なるものの基本的な考え方は一緒。
