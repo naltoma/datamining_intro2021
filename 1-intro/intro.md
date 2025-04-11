@@ -332,9 +332,10 @@
 ## 次回に向けた予習
 機械学習について概説している以下のドキュメントを読み、自分なりに気になる事柄を整理せよ。疑問等は、次回授業の前日までに、別途用意するフォームに入力すること。
 
-- 例1: [An introduction to machine learning with scikit-learn](https://scikit-learn.org/stable/tutorial/basic/tutorial.html)の冒頭「Machine learning: the problem setting」から「Learning and predicting」あたりまで。
-- 例2: [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)の「Framing: Check Your Understanding」あたりまで。
-    - 自動翻訳されて「機械学習集中講座」になってる模様。これの「フレーム処理：理解度をチェック」あたりまで。
+- 例1: [An introduction to machine learning with scikit-learn](https://scikit-learn.org/1.4/tutorial/basic/tutorial.html)の冒頭「Machine learning: the problem setting」から「Learning and predicting」あたりまで。
+    - scikit-learn 1.4 で古いと書かれていますが、概要を理解するためのドキュメントとしては問題ありません。
+- 例2: [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)
+    - 自動翻訳されて「機械学習集中講座」になってる模様。「クラッシュコースを開始する」→「線形回帰（70分）」あたりまで。
 - Python/Numpy/Pandas/Matplotlib初心者の人
     - Python
         - [Progate](https://prog-8.com/), オンライン演習しながら学べます。
