@@ -48,6 +48,9 @@ parts:
 #  - file: 4-nlp/typical_methods.md
 #  - file: 4-nlp/typical_methods_mecab.ipynb
 #  - file: 4-nlp/typical_methods_spacy.ipynb
+  - file: 4-nlp/towards_deeplearning0.md
+  - file: 4-nlp/rule_based.ipynb
+  - file: 4-nlp/ml_bow.ipynb
   - file: 4-nlp/towards_deeplearning.md
   - file: 4-nlp/nlp2.md
 #  - file: 4-nlp/train_momotaro.ipynb
