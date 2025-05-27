@@ -300,8 +300,8 @@ word2vecにおける疑似ラベルは以下のように設計します。
 | NA, NA, is, a | word2ec |
 | NA, word2vec, a, technique | is |
 | word2vec, is, technique, in | a |
-| is, a, in, natural | in |
-| technique, in, language, processing | natural |
+| is, a, in, natural | technique |
+| a, technique, natural, language | in |
 | 以下同様のため省略 | |
 
 CBOW は比較的高頻度語の学習に強みがあり、Skip-gram は低頻度語もしっかり学習できるなど特性が異なりますが、いずれも「単語と文脈の分布的特徴を学習する」という点では共通です。学習の際に **Negative Sampling** や **Hierarchical Softmax** を導入して大幅に高速化したことも、word2vec の普及を後押ししました。
