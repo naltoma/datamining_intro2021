@@ -1,4 +1,5 @@
 # Transformer (Hugging Face) 入門
+本資料では Transformer のプラットフォームを提供している Hugging Face を紹介し、穴埋めタスクを例に具体的なコードを紹介している。piplineに対応しているモデルを選び、想定範囲内のタスクであればpipelineを用いる方が楽だが、細かいところには手が届きにくい。トークナイザとモデルを利用する方法だと柔軟なコードを書けるが、様々な追加処理が出てきてしまうため大変。
 
 ## Huggin Faceとは
 Transformerベースの機械学習モデルの開発や共有をするためのプラットフォームの一つ。関連ライブラリやデータセット共有も行われ、研究者・開発者間で広まった。最近ではGoogle Colabのようなクラウド環境も提供している。実際に動かしながら確認するチュートリアルやドキュメントも充実しているので、興味がある場所から覗くことをお勧めします。
@@ -6,9 +7,9 @@ Transformerベースの機械学習モデルの開発や共有をするための
 - 関連ページ
     - 公式サイト：https://huggingface.co/
     - ドキュメント例
-        - [Transformersチュートリアル](https://huggingface.co/docs/transformers/v4.41.3/ja/index)
-        - [NLPコース](https://huggingface.co/learn/nlp-course/ja/chapter0/1)
-            - 左上の「NLP Course」をクリックすることで他コースも選択可能。
+        - [Transformersチュートリアル](https://huggingface.co/docs/transformers/main/ja/index)
+        - [LLMコース](https://huggingface.co/learn/llm-course/ja/chapter0/1)
+            - 左上の「LLM Course」をクリックすることで他コースも選択可能。
             - 公式トップページの「Learn」からも様々なコースあり。
         - [Datasetsチュートリアル](https://huggingface.co/docs/datasets/tutorial)
 
@@ -55,10 +56,17 @@ https://huggingface.co/models にモデル一覧が登録されている。2024�
 
 上記は探し方の一例である。今回は「穴埋めタスク」用のモデルを使いたい。穴埋めタスクはBERT系モデルであることが多い。また日本語で穴埋めしたい。そこで[書籍: 大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)でも採用しているBERT系モデルの一つ、[tohoku-nlp/bert-base-japanese-v3](https://huggingface.co/tohoku-nlp/bert-base-japanese-v3) を使うことにしよう。
 
+````{hint}
+[tohoku-nlp/bert-base-japanese-v3](https://huggingface.co/tohoku-nlp/bert-base-japanese-v3)を使うためには、以下のようにして fugashi[unidic-lite] をインストールする必要がある。
+```
+!pip install 'fugashi[unidic-lite]'
+```
+````
+
 ### step 2: トークナイザとモデルを用意する。
 選んだモデル名、今回は「tohoku-nlp/bert-base-japanese-v3」を指定してトークナイザとモデルを用意しよう。pipelineを利用する方法と、そうではない方法とでコードが大きく異なる。
 
-[pipeline](https://huggingface.co/docs/transformers/v4.41.3/ja/main_classes/pipelines)はモデルとタスクを適切に用意できる場合にはとても楽に利用することができる。モデルや入出力をカスタマイズせず、シンプルに使う場合にはこちらの方が良いだろう。しかしながら「どのモデルがどのタスクとして用意されているのか」は明示的ではなく、適切な組み合わせを探し出すことが難しいことも多い。このためこちらでは2種類の方法を示す。
+[pipeline](https://huggingface.co/docs/transformers/main/ja/main_classes/pipelines)はモデルとタスクを適切に用意できる場合にはとても楽に利用することができる。モデルや入出力をカスタマイズせず、シンプルに使う場合にはこちらの方が良いだろう。しかしながら「どのモデルがどのタスクとして用意されているのか」は明示的ではなく、適切な組み合わせを探し出すことが難しいことも多い。このためこちらでは2種類の方法を示す。
 
 なお、どちらの場合であっても「初めて利用する際にはモデルのダウンロード」が必要である。そして Google Colab で実行する際には「毎回環境がリセットされる」ため、何も考えずに実行すると毎回ダウンロードすることになる。今回はこちらの方法（毎回ダウンロード）を示す。大規模なモデルを利用する場合には、このダウンロードだけで数時間かかることもあるため工夫が必要になることがある。ここでいう工夫とは以下のような対応を指す。
 
@@ -77,6 +85,9 @@ https://huggingface.co/models にモデル一覧が登録されている。2024�
 基本的にはpipelineの一覧からタスクに応じた利用方法を探すことになる。今回のタスクならば「Natural Language Processing」にある「FillMaskPipeline」が該当する。そのはずだが、今回のモデルでは失敗してしまう（ありがち）。。仕方がないので素のpipelineを利用することにした。
 
 ```Python
+# fugashiインストール
+!pip install 'fugashi[unidic-lite]'
+
 from transformers import pipeline
 import pandas as pd
 
@@ -92,6 +103,9 @@ fill_mask = pipeline(task="fill-mask", model=model_name)
 トークナイザとモデルを用意する必要がある。
 
 ```Python
+# fugashiインストール
+!pip install 'fugashi[unidic-lite]'
+
 import torch
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 import pandas as pd
@@ -107,6 +121,9 @@ model = AutoModelForMaskedLM.from_pretrained(model_name)
 ほぼ何も考えずに丸投げすることができます。
 
 ```Python
+# fugashiインストール
+!pip install 'fugashi[unidic-lite]'
+
 from transformers import pipeline
 import pandas as pd
 
@@ -126,12 +143,23 @@ df = pd.DataFrame(outputs[:top_k])
 df
 ```
 
+実行結果は次のようになるはず。
+
+| | score | token | token_str | sequence |
+| --- | --- | --- | --- | --- |
+| 0 | 0.519207 | 13995 | 沖縄 | 琉球 大学 は 沖縄 に あり ます |
+| 1 | 0.116510 | 13931 | 台湾 | 琉球 大学 は 台湾 に あり ます |
+| 2 | 0.044772 | 12569 | 東京 | 琉球 大学 は 東京 に あり ます |
+
 #### step 3-2: pipelineを使わない方法
 まずトークナイザでトークンID系列に変換する。それをモデルに入力を与えると logits を取得することができる。logsitsには「各トークン位置に対する全ての単語の確率スコア（対数確率）」が保存されている。ここからMASK位置のスコアを取得し、そのスコア一覧における上位k件のトークンを抽出する。
 
 ということをつらつらと書く必要があるため、pipelineと比べると手間がかかる。ただし個別にカスタマイズしやすい（pipelineではほぼ内部で完結してしまうためカスタマイズしづらい）ため、目的に応じて使い分けると良いだろう。
 
 ```Python
+# fugashiインストール
+!pip install 'fugashi[unidic-lite]'
+
 import torch
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 import pandas as pd
@@ -170,6 +198,14 @@ predicted_tokens = [tokenizer.decode(token_id) for token_id in top_k_token_ids]
 print("予測された単語:")
 for i, token in enumerate(predicted_tokens, 1):
     print(f"{i}: {token}")
+```
+
+実行結果は次のようになるはず。
+```
+予測された単語:
+1: 沖縄
+2: 台湾
+3: 東京
 ```
 
 ---

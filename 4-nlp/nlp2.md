@@ -166,8 +166,13 @@ L = -logP(w_t|w_{t-1},w_{t+1})
 ```{math}
 :label: skipgram_loss
 L = -logP(w_{t-1},w_{t+1}|w_t) \\
-= -logP(w_{t-1}|w_t)P(w_{t+1}|w_t) \\
+\approx -logP(w_{t-1}|w_t) \cdot P(w_{t+1}|w_t) \\
 = -(logP(w_{t-1}|w_t) + logP(w_{t+1}|w_t))
+```
+
+```{tip}
+- 式{eq}`skipgram_loss`の式展開における2行目は、前後の単語は中心語を条件とすると独立である（$w_{t-1} \perp w_{t+1} \mid w_t$）と仮定した上で近似しています。
+- 3行目は、対数の積の性質（$\log(ab) = \log a + \log b$）を用いています。
 ```
 
 ---
