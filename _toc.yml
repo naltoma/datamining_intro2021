@@ -67,6 +67,8 @@ parts:
     title: pipelineを用いた推定例
   - file: 4-nlp/sample_pipeline2.ipynb
     title: pipelineを用いた推定例の続き
+  - file: 4-nlp/llm_tokenization.ipynb
+    title: LLMにおけるトークナイザの振る舞いとトークン埋め込みの観察
   - file: 4-nlp/jrte_pn_bert_train.ipynb
     title: AutoModelForSequenceClassificationを用いたファインチューニング例
 
