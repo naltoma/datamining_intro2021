@@ -50,14 +50,14 @@
 		- judges-json: 3人分のアノテーション結果。これの多数決をしたものが sentiment 列。
 		- usage: データ種別。train, dev, test。
 			- 学習時にはtrainのみ、もしくは train, dev までを用いること。テスト時には test のみを用いること。
-		- doc: nlp(text)により用意したdocオブジェクト（解析結果）。
+		- wakati: nlp(text)により分かち書きしたテキスト文。
 
 ---
 ## Level 1: 単語出現回数を特徴とする特徴ベクトルの構築。（30分想定）
 - 前提
 	- pn_add.pklを変数dfに読み込んでおくこと。
 - やること
-	- df["text"]の全テキストに対し、[CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)を用いて単語出現回数を特徴とする特徴ベクトルを構築せよ。**なお、Level 1〜4 の範囲では CountVectorizer をカスタマイズをしてはならない。CountVectorizerをオプション指定なしに利用すること。**
+	- df["wakati"]の全テキストに対し、[CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)を用いて単語出現回数を特徴とする特徴ベクトルを構築せよ。**なお、Level 1〜4 の範囲では CountVectorizer をカスタマイズをしてはならない。CountVectorizerをオプション指定なしに利用すること。**
 	- CountVectorizer.fit_transform() で構築したベクトル集合を、変数 X に保存するものとする。
 	- CountVectorizer.get_feature_names_out() の実行結果（ベクトル構築時に生成された特徴）を、変数 features に保存するものとする。
 - 報告事項
