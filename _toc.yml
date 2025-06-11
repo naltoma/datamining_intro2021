@@ -85,7 +85,7 @@ parts:
 - caption: "課題"
   numbered: true
   chapters:
-  - file: report/report3_2024.md
+  - file: report/report3_2025.md
   - file: report/report4_2025/report4.md
   - file: report/report5_2024.md
 
