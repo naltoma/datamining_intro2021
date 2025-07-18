@@ -19,7 +19,7 @@
         - [From Prejudice to Parity: A New Approach to Debiasing Large Language Model Word Embeddings](https://arxiv.org/abs/2402.11512), 2024
         - [Bias and Fairness in Large Language Models: Evaluation and Mitigation Techniques](https://www.researchgate.net/publication/392124172_Bias_and_Fairness_in_Large_Language_Models_Evaluation_and_Mitigation_Techniques), 2025　＊LLM全般
         - [Racial bias in AI-mediated psychiatric diagnosis and treatment: a qualitative comparison of four large language models](https://www.nature.com/articles/s41746-025-01746-4), 2025　＊医療
-        - [Debiasing Diffusion Model: Enhancing Fairness through Latent Representation Learning in Stable Diffusion Model], 2025　＊画像生成
+        - [Debiasing Diffusion Model: Enhancing Fairness through Latent Representation Learning in Stable Diffusion Model](https://arxiv.org/abs/2503.12536), 2025　＊画像生成
 - 論文条件
     - (1) 指定キーワード。最低限以下に示す必須単語を設定して検索してください。
         - 必須単語1: 「機械学習、人工知能、AI、LLM」やそれに類する単語から1つを選ぶ。
