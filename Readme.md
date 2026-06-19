@@ -13,6 +13,8 @@
     - 課題2を更新。
     - Spacyトラブルへの対応。Python 3.12 + Spacy 3.8 + Ginza 5.2 の構成だとそのままでは動作しないため、config設定を追加。
     - 課題3を更新。
+    - 課題4を更新。
+    - word2vec周りを[特徴量設計の進化：word2vecから深層学習への道](./4-nlp/towards_deeplearning2.md)へ刷新。
 
 ---
 ## 参考文献

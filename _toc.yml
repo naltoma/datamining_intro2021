@@ -52,7 +52,8 @@ parts:
   - file: 4-nlp/rule_based.ipynb
   - file: 4-nlp/ml_bow.ipynb
   - file: 4-nlp/towards_deeplearning.md
-  - file: 4-nlp/nlp2.md
+#  - file: 4-nlp/nlp2.md
+  - file: 4-nlp/towards_deeplearning2.md
 #  - file: 4-nlp/train_momotaro.ipynb
   - file: 4-nlp/nlp3.md
   - file: 4-nlp/fine-tuning.ipynb
@@ -88,7 +89,7 @@ parts:
   - file: report/report1_2026.md
   - file: report/report2_2026.md
   - file: report/report3_2026/report3_2026.md
-  - file: report/report4_2025/report4.md
+  - file: report/report4_2026/report4_2026.ipynb
   - file: report/report5_2025.md
 
 - caption: "付録"
