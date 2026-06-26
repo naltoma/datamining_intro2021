@@ -15,6 +15,7 @@
     - 課題3を更新。
     - 課題4を更新。
     - word2vec周りを[特徴量設計の進化：word2vecから深層学習への道](./4-nlp/towards_deeplearning2.md)へ刷新。
+    - 言語モデル周りを[言語モデル：日常のシステムが共有する確率計算](./4-nlp/towards_deeplearning3.md)へ刷新。
 
 ---
 ## 参考文献

@@ -54,6 +54,8 @@ parts:
   - file: 4-nlp/towards_deeplearning.md
 #  - file: 4-nlp/nlp2.md
   - file: 4-nlp/towards_deeplearning2.md
+  - file: 4-nlp/towards_deeplearning3.md
+  - file: 4-nlp/ex1_domain_comparison_output.ipynb
 #  - file: 4-nlp/train_momotaro.ipynb
   - file: 4-nlp/nlp3.md
   - file: 4-nlp/fine-tuning.ipynb
